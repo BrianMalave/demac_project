@@ -1,0 +1,41 @@
+//Colors
+$color-1: #1A3437;
+$color-2: #4F6667;
+$color-3: #879896;
+$color-4: #ED702D;
+$color-5: #F5C142;
+$color-6: #5B5A59;
+$color-7: #DDDDDD;
+$color-8: #F4F4F4;
+//Sizes
+$w-100: 100%;
+//fonts
+$font-1: Arial, Helvetica, sans-serif;
+//Margin
+$mr-0: 0px;
+$mr-40: 40px;
+//Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: 'Axiforma';
+  src: local('Axiforma Regular'),
+        url('/src/fonts/Axiforma\ Regular.otf') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: local('SF Pro Regular'),
+        url('/src/fonts/SF-Pro-Text-Regular.otf') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+}
