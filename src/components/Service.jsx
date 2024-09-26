@@ -12,11 +12,11 @@ const Service = () => {
       </div>
 
       <div className="serviceSubContainer">
-        <div>
+        <div className="serviceLogoContainer">
           <img className='serviceLogo' src={heroLogo} alt="Logo" />
         </div>
 
-        <div>
+        <div className="serviceTextContainer">
           <div className="serviceSubTitleContainer">
             <h2 className="serviceTitleDescription">
               Contamos más de 30 años de trayectoria. Nos apasiona desarrollar y construir obras de alto impacto que marcan la diferencia en las comunidades.

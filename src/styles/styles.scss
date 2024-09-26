@@ -224,7 +224,7 @@
 
 .serviceSubContainer {
 	display: flex;
-	align-items: flex-end;
+	align-items: stretch;
 }
 
 .serviceTitleDescription {
@@ -236,11 +236,39 @@
 	color: white;
 }
 
-.serviceLogo {
+.serviceLogoContainer {
+	height: 150px;
 	position: relative;
-	right: 8rem;
+	flex-grow: 0;
+	// right: 8rem;
+	top: 28rem;
+}
+
+.serviceLogo {
 	width: 700px;
 	height: 150px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    .serviceLogo {
+      animation: moveIn linear both;
+      animation-timeline: view();
+      animation-duration: 1s;
+    }
+    @keyframes moveIn {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.serviceTextContainer {
+	width: 580px;
 }
 
 .serviceSubTitleContainer {
