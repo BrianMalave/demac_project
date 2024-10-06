@@ -3,12 +3,12 @@ import { Form } from "./index";
 import { phoneIcon, letterIcon } from '../assets/assets';
 
 const Contact = () => (
-  <section id='contacto' className='contactSection'>
+  <section className='contactSection'>
     <div>
       <div>
         <h4>¿Agendamos una reunión?</h4>
         <h1>Cuéntanos más de tu proyecto</h1>
-        <h4>y comencemos a desarrollarlo con bases sólidas</h4>
+        <h4>y comencemos a desarrollarlo con bases sólidas. Te invitamos a construir un futuro sostenible junto a nosotros.</h4>
       </div>
       <div>
         <a className='contactLinks' href='mailto:contacto@constructorademac.cl'>

@@ -24,18 +24,56 @@ $mr-40: 40px;
   }
 }
 
+//fonts-face
+
+//Primary
 @font-face {
   font-family: 'Axiforma';
-  src: local('Axiforma Regular'),
-        url('/src/fonts/Axiforma\ Regular.otf') format('opentype');
+  src: url('/src/fonts/Axiforma\ Regular.otf') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+}
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url('/src/fonts/Axiforma\ Medium.otf') format('opentype');
+        font-weight: 500;
+        font-style: normal;
+}
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url('/src/fonts/Axiforma\ SemiBold.otf') format('opentype');
+        font-weight: 600;
+        font-style: normal;
+}
+
+
+//Secondary
+@font-face {
+  font-family: 'SF Pro';
+  src: url('/src/fonts/SF-Pro-Display-Light.otf') format('opentype');
+        font-weight: 300;
+        font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('/src/fonts/SF-Pro-Text-Regular.otf') format('opentype');
         font-weight: 400;
         font-style: normal;
 }
 
 @font-face {
   font-family: 'SF Pro';
-  src: local('SF Pro Regular'),
-        url('/src/fonts/SF-Pro-Text-Regular.otf') format('opentype');
-        font-weight: 400;
+  src: url('/src/fonts/SF-Pro-Display-Medium.otf') format('opentype');
+        font-weight: 500;
+        font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('/src/fonts/SF-Pro-Display-Semibold.otf') format('opentype');
+        font-weight: 600;
         font-style: normal;
 }

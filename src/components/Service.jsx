@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { heroLogo, plusIcon } from '../assets/assets';
+import { heroLogo, plusIcon, minusIcon } from '../assets/assets';
 import { disclosureInfo } from '../constants/constants'
 import { formatContent, toggleDisclosure } from '../utils/utils'
 
 const Service = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   return (
-    <section id='servicios' className='serviceSection'>
+    <section className='serviceSection'>
       <div className="serviceTitleContainer">
         <h1 className="serviceTitle">Servicios</h1>
       </div>
@@ -19,7 +19,7 @@ const Service = () => {
         <div className="serviceTextContainer">
           <div className="serviceSubTitleContainer">
             <h2 className="serviceTitleDescription">
-              Contamos más de 30 años de trayectoria. Nos apasiona desarrollar y construir obras de alto impacto que marcan la diferencia en las comunidades.
+              Estamos comprometidos con ofrecer soluciones integrales y personalizadas
             </h2>
           </div>
 
@@ -30,7 +30,7 @@ const Service = () => {
                 <span>{disclosure.title}</span>
                 <img
                   className="disclosureIcon"
-                  src={activeIndex === index ? '-' : plusIcon}
+                  src={activeIndex === index ? minusIcon : plusIcon}
                   alt={activeIndex === index ? 'Cerrar' : 'Abrir'}
                 />
               </div>

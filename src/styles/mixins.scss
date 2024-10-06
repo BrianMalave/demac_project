@@ -21,9 +21,43 @@
   padding: 0 110px 0 110px;
 }
 
-// @mixin paddingXY {
-//   padding: 100px 110px 50px 110px;
-// }
+
+//font mixin primary
+@mixin primary-font-regular {
+  font-family: 'Axiforma', sans-serif;
+  font-weight: 400;
+}
+
+@mixin primary-font-medium {
+  font-family: 'Axiforma', sans-serif;
+  font-weight: 500;
+}
+
+@mixin primary-font-semibold {
+  font-family: 'Axiforma', sans-serif;
+  font-weight: 600;
+}
+
+//font mixin secondary
+@mixin secondary-font-light {
+  font-family: 'SF Pro', sans-serif;
+  font-weight: 300;
+}
+
+@mixin secondary-font-regular {
+  font-family: 'SF Pro', sans-serif;
+  font-weight: 400;
+}
+
+@mixin secondary-font-medium {
+  font-family: 'SF Pro', sans-serif;
+  font-weight: 500;
+}
+
+@mixin secondary-font-semibold {
+  font-family: 'SF Pro', sans-serif;
+  font-weight: 600;
+}
 
 @mixin marginY {
   margin: 100px auto 100px auto;

@@ -2,14 +2,14 @@ import { useState } from "react";
 import { civiles, industriales, maritima, mineria, viales } from '../assets/assets'
 
 const Field = () => (
-  <section id='field' className='fieldSection'>
+  <section className='fieldSection'>
     <div className='fieldInfoContainer'>
       <div className="fieldInfoTitleContainer">
-        <h1 className="fieldTitle">Nos destacamos en diversas áreas del rubro</h1>
+        <h1 className="fieldTitle">Destacamos en proyectos diversos, con un enfoque de calidad, seguridad y excelencia</h1>
       </div>
       <div className="fieldInfoDescription">
         <p className="fieldDescription">
-          Contamos con un equipo multidisciplinario altamente calificado, lo que nos permite gestionar simultáneamente el desarrollo de diversos proyectos de manera eficiente y eficaz.
+        Contamos con un equipo multidisciplinario altamente calificado, lo que nos permite gestionar simultáneamente el desarrollo y construcción de diversos proyectos de manera eficiente y eficaz.
         </p>
       </div>
     </div>

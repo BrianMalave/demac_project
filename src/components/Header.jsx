@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { demacLogo, menu, close } from '../assets/assets';
+import { demacLogo, menu, close, demacLogoGray } from '../assets/assets';
 import { navLinks } from '../constants/constants';
 const Header = () => {
 	const [toggle, setToggle] = useState(false);
@@ -7,7 +7,7 @@ const Header = () => {
 		<nav className="navBar">
 			{/* Desktop */}
 			<a href='http://localhost:5173/'>
-				<img src={demacLogo} alt="Constructora Demac logo" className="logoImage"
+				<img src={demacLogoGray} alt="Constructora Demac logo" className="logoImage"
 				/>
 			</a>
 			<ul className="navLinkContainer">

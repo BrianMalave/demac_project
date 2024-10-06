@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { logoFooter } from '../assets/assets';
 
 const Footer = () => (
-  <section id='footer' className='footerSection'>
+  <section className='footerSection'>
     <div className='footerContainer'>
       <div className='footerLogoContainer'>
         <img src={logoFooter} />
@@ -10,17 +10,17 @@ const Footer = () => (
       </div>
       <div className="footerMenuContainer">
         <ul>
-          <li className="footerListTitle"><a className='titleLink' href='#'>Nosotros</a></li>
+          <li className="footerListTitle"><a className='titleLink' href='#nosotros'>Nosotros</a></li>
         </ul>
         <ul>
-          <li className="footerListTitle"><a href='#'>Servicios</a></li>
+          <li className="footerListTitle"><a href='#servicios'>Servicios</a></li>
           <li><a className="foooterLink" href="#">Ingeniería</a></li>
           <li><a className="foooterLink" href="#">Habilitación de Redes</a></li>
           <li><a className="foooterLink" href="#">Hormigón</a></li>
           <li><a className="foooterLink" href="#">Estructuras</a></li>
         </ul>
         <ul>
-          <li className="footerListTitle"><a href='#'>Partners</a></li>
+          <li className="footerListTitle"><a href='#partners'>Partners</a></li>
           <li><a className="foooterLink" href="#">Facebook</a></li>
           <li><a className="foooterLink" href="#">Tumblr</a></li>
           <li><a className="foooterLink" href="#">Instagram</a></li>
@@ -28,7 +28,7 @@ const Footer = () => (
           <li><a className="foooterLink" href="#">Twitter</a></li>
         </ul>
         <ul>
-          <li className="footerListTitle"><a href='#'>Contacto</a></li>
+          <li className="footerListTitle"><a href='#contacto'>Contacto</a></li>
           <li><a className="foooterLink" href="#">Formulario</a></li>
           <li><a className="foooterLink" href="#">LinkedIn</a></li>
         </ul>

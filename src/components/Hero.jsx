@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { heroLogo } from '../assets/assets';
 const Hero = () => (
-  <section id='nosotros' className='heroSection'>
+  <section className='heroSection'>
     <div className='heroMainContainer'>
       <div className='heroSubContainer'>
         <h1 className='heroMessage'>
@@ -10,7 +10,7 @@ const Hero = () => (
       </div>
       <div className='heroSubContainerTwo'>
         <div className='heroParagraphContainer'>
-          <p>Contamos con más de 30 años de trayectoria.</p>
+          <p><span className='big-words-paragraph' >Contamos con más de 30 años de trayectoria.</span></p>
           <p>Nos apasiona desarrollar y construcir obras de alto impacto que</p>
           <p><span className='big-words-paragraph'>marcan la diferencia</span> en las comunidades.</p>
         </div>

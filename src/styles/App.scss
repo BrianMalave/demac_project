@@ -1,7 +1,649 @@
-@import './styles.scss';
+// @import './styles.scss';
 // #root {
 //   max-width: 1280px;
 //   margin: 0 auto;
 //   padding: 2rem;
 //   text-align: center;
 // }
+
+@use './var.scss' as l;
+@import './mixins.scss';
+
+.hideMobile {
+  background-color: red;
+  @include hideMobile;
+}
+
+.fixed {
+  @include fixedPosition
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.pt-140 {
+  padding-top: 140px !important;
+}
+
+.pt-100 {
+  padding-top: 100px !important;
+}
+
+.pb-140 {
+  padding-bottom: 140px !important;
+}
+
+.mr-0 {
+  padding: l.$mr-0;
+}
+
+.mr-40 {
+  padding: l.$mr-40;
+}
+
+/******************************Start Header******************************/
+.logoImage {
+  @include logoImage;
+}
+
+.mainContainer {
+  @include paddingX;
+  @include flex-center-x;
+}
+
+.mainContainerColor {
+  background-color: l.$color-1;
+}
+
+.mainContainerSubcolor {
+  background-color: l.$color-6;
+}
+
+.mainContainerSubColorTwo {
+  background-color: l.$color-8;
+}
+
+.navBar {
+  background-color: l.$color-1;
+  width: l.$w-100;
+  @include flex-center-between;
+  @include paddingX;
+}
+
+.navLinkContainer {
+  display: flex;
+  justify-content: end;
+  flex: 1;
+  list-style: none;
+}
+
+.navLinks {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 80%;
+  letter-spacing: 1.3px;
+  @include primary-font-regular;
+
+  &:hover::after {
+    width: 20px;
+  }
+
+  &::after {
+    display: block;
+    margin: 0;
+    content: '';
+    position: relative;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: l.$color-5;
+    transition: width 0.4s ease;
+  }
+}
+
+/******************************End Header******************************/
+/******************************Start Hero_Section******************************/
+.heroSection {
+  width: l.$w-100;
+}
+
+.heroSubContainer {
+  border-bottom: 1px solid l.$color-7;
+  text-align: left;
+}
+
+.heroMessage {
+  width: 65rem;
+  // font-family: l.$font-1;
+  color: l.$color-3;
+  font-size: 74px;
+  font-weight: 400;
+  line-height: 84px;
+  @include slowAppear;
+}
+
+.heroSubContainerTwo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include marginY;
+}
+
+.heroImage {
+  height: 100px;
+  width: 450px;
+}
+
+.big-words-paragraph,
+.big-words {
+  color: white;
+  @include fastAppear;
+}
+
+.heroParagraphContainer {
+  color: l.$color-3;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 25px;
+  @include secondary-font-semibold;
+}
+
+/******************************End Hero_Section******************************/
+/******************************Start Field_Section******************************/
+.fieldSection {
+  @include marginY;
+  @include flex-center-column;
+}
+
+.projectInfoContainer,
+.fieldInfoContainer {
+  // width: 32.5rem;
+  @include flex-center-column;
+}
+
+.fieldInfoTitleContainer {
+  width: 880px;
+}
+
+.fieldInfoDescription {
+  width: 600px;
+}
+
+.fieldTitle {
+  // font-family: l.$font-1;
+  color: l.$color-6;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 54px;
+  text-align: center;
+}
+
+.projectDescription,
+.fieldDescription {
+  color: l.$color-6;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  @include secondary-font-regular;
+}
+
+.fieldImagesContainer {
+  display: flex;
+  gap: 18px;
+
+}
+
+.fieldImagesSubContainer {
+  margin-top: 65px;
+  transition: margin-top 0.5s ease;
+
+  &:hover {
+    margin-top: 0;
+  }
+
+  h2 {
+    color: l.$color-6;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    @include secondary-font-semibold;
+  }
+}
+
+.fieldImages {
+  border-radius: 20px;
+}
+
+/******************************End Field_Section******************************/
+/******************************Start Service_Section******************************/
+.serviceTitleContainer {
+  border-top: 1px solid white;
+  margin: 50px 0 60px 0;
+}
+
+.serviceTitle {
+  color: white;
+  font-size: 20px;
+  line-height: 16px;
+  letter-spacing: 1.3px;
+  text-align: left;
+  @include secondary-font-regular;
+}
+
+.serviceSubContainer {
+  display: flex;
+  align-items: stretch;
+}
+
+.serviceTitleDescription {
+  // font-family: Axiforma;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46px;
+  text-align: left;
+  color: white;
+}
+
+.serviceLogoContainer {
+  height: 150px;
+  position: relative;
+  flex-grow: 0;
+  // right: 8rem;
+  top: 18.5rem;
+}
+
+.serviceLogo {
+  width: 700px;
+  height: 150px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    .serviceLogo {
+      animation: moveIn linear both;
+      animation-timeline: view();
+      animation-duration: 1s;
+    }
+
+    @keyframes moveIn {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.serviceTextContainer {
+  width: 580px;
+}
+
+.serviceSubTitleContainer {
+  padding-bottom: 50px;
+}
+
+/******************************End Service_Section******************************/
+/******************************Start Contact_Section******************************/
+.contactSection {
+  display: flex;
+  align-items: center;
+  column-gap: 108px;
+  margin-top: 110px;
+
+  h4 {
+    width: 380px;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+    color: l.$color-6;
+    @include secondary-font-semibold;
+  }
+
+  h1 {
+    width: 380px;
+    font-size: 48px;
+    line-height: 50px;
+    color: l.$color-6;
+    @include primary-font-regular;
+  }
+}
+
+.contactLinks {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  text-decoration: none;
+  color: l.$color-6;
+  @include secondary-font-medium;
+}
+
+form {
+  font-family: 'SF Pro', sans-serif;
+  max-width: 450px;
+  min-width: 400px;
+  padding: 30px;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form .inputField {
+  width: 100%;
+  background: l.$color-8;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0 10px 10px;
+  font-size: 16px;
+  color: l.$color-6;
+  line-height: 18px;
+  @include secondary-font-medium;
+}
+
+.inputBox {
+  margin-top: 20px;
+}
+
+.mess {
+  height: 100px;
+  resize: none;
+}
+
+form button {
+  margin-top: 10px;
+  gap: 12px;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: #5B5A59;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: white;
+  border-radius: 30px;
+  padding: 18px 0 18px 0;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+  letter-spacing: 0.8px;
+  @include secondary-font-semibold;
+}
+
+form button img {
+  width: 14px;
+  height: auto;
+}
+
+form button:hover {
+  background-color: black;
+}
+
+/******************************End Contact_Section******************************/
+/******************************Start Project_Section******************************/
+.projectSection {
+  margin-top: 120px;
+  @include flex-center-column;
+}
+
+.projectInfoContainer {
+  width: 680px;
+}
+
+.projectTitle {
+  // font-family: l.$font-1;
+  font-family: 'Axiforma';
+  color: l.$color-6;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 54px;
+  text-align: center;
+}
+
+.knowSomeButtonContainer {
+  margin: 80px 0 26px 0;
+  align-self: flex-start;
+}
+
+.knowSomeButton {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 5px;
+  color: l.$color-6;
+  @include secondary-font-semibold;
+}
+
+.arrowDownImage {
+  align-self: flex-start;
+}
+
+/******************************End Project_Section******************************/
+/******************************Start Partner_Section******************************/
+.partnerSection {
+  width: l.$w-100;
+}
+
+.partnerMainContainer {
+  display: flex;
+  padding: 60px;
+  border-bottom: 1px solid #5B5A59;
+}
+
+.partnerTitleContainer {
+  padding-left: 60px;
+  width: 750px;
+
+  .partnerTitle {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 54px;
+    color: l.$color-6;
+    @include primary-font-medium;
+  }
+}
+
+.partnerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.partnerFieldTitle {
+  border-bottom: 1px solid #5B5A59;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: l.$color-6;
+  @include secondary-font-semibold;
+}
+
+.partnerProjectName {
+  font-size: 28px;
+  line-height: 38px;
+  text-align: left;
+  color: l.$color-6;
+  @include primary-font-semibold;
+
+  .partnerPorjectLocation {
+    font-size: 16px;
+    line-height: 18px;
+    text-align: left;
+    @include secondary-font-light;
+  }
+}
+
+.partnerLogoContainer {
+  // width: 30%;
+  display: flex;
+  justify-content: center;
+
+  .partnerLogo {
+    width: 300px;
+    height: 80px;
+  }
+}
+
+.partnerLogoContainerAlt {
+  // width: 30%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .partnerLogo {
+    width: 300px;
+    height: 80px;
+    align-self: flex-start;
+  }
+
+  h3 {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 0;
+    align-self: flex-start;
+    @include secondary-font-light;
+  }
+}
+
+
+.partnerInfoContainer {
+  width: 70%;
+}
+
+.clientContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-self: flex-start;
+  align-items: center;
+
+  .partnerLogo {
+    width: 160px;
+  }
+}
+
+/******************************End Partner_Section******************************/
+/******************************Start Footer_Section******************************/
+.footerSection {
+  width: 100%;
+}
+
+.footerContainer {
+  // gap: 140px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerLogoContainer h1 {
+  width: 240px;
+  font-size: 14px;
+  line-height: 23px;
+  text-align: left;
+  color: white;
+  @include secondary-font-light;
+}
+
+.footerMenuContainer {
+  display: flex;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      cursor: pointer;
+    }
+
+    a {
+      color: l.$color-8;
+      text-decoration: none;
+      @include secondary-font-regular;
+    }
+  }
+}
+
+.foooterLink {
+  font-family: 'SF Pro';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.footerListTitle {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.disclaimerContainer {
+  margin-top: 20px;
+  border-top: 1px solid white;
+
+  p {
+    padding: 20px 0 20px 0;
+    font-family: 'SF Pro';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: l.$color-8;
+  }
+}
+
+/******************************End Footer_Section******************************/
+.boxWidth {
+  max-width: 1280px;
+  width: 100%;
+}
+
+
+.disclosureContainer {
+  margin-bottom: 10px;
+}
+
+.disclosureHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.09px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  @include secondary-font-medium;
+
+
+  .disclosureIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.disclosureContent {
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding: 0 10px;
+  color: white;
+
+  &.active {
+    max-height: 500px;
+    padding: 10px;
+  }
+
+  p,
+  li {
+    margin: 0;
+    font-size: 16px;
+    @include secondary-font-regular;
+  }
+}
