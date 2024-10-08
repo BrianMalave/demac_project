@@ -13,15 +13,6 @@ const Project = () => (
         </p>
       </div>
     </div>
-    <div className="knowSomeButtonContainer">
-      <span className="knowSomeButton">
-        <img src={arrowDown} alt="arrow Down" className="arrowDownImage"/>
-        Conoce aqui algunos de ellos.
-      </span>
-    </div>
-    {/* <div className="galleryImagesContainer">
-    </div> */}
-    <img src={gallery} alt="gallery" className="galleryImage"/>
   </section>
 );
 

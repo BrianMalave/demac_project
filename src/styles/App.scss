@@ -386,6 +386,10 @@ form button:hover {
   background-color: black;
 }
 
+button.swal2-confirm.swal2-styled {
+  background-color: #1A3437;
+}
+
 /******************************End Contact_Section******************************/
 /******************************Start Project_Section******************************/
 .projectSection {
@@ -408,6 +412,7 @@ form button:hover {
 }
 
 .knowSomeButtonContainer {
+  padding: 0 300px 0 300px;
   margin: 80px 0 26px 0;
   align-self: flex-start;
 }
@@ -421,8 +426,30 @@ form button:hover {
   @include secondary-font-semibold;
 }
 
+.galleryImage {
+  width: 100%;
+}
+
 .arrowDownImage {
   align-self: flex-start;
+}
+
+.slide-content {
+  position: relative;
+}
+
+.triangle-topright {
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  width: 0; 
+  height: 0; 
+  border-top: 100px solid white; 
+  border-left: 100px solid transparent; 
+}
+
+.swiper-pagination-bullet-active {
+  background: white;
 }
 
 /******************************End Project_Section******************************/

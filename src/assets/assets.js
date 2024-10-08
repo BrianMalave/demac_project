@@ -22,6 +22,13 @@ import belfiLogo from './belfiLogo.svg'
 import arrigoniLogo from './arrigoniLogo.svg'
 import minusIcon from './minusIcon.svg'
 import demacLogoGray from './demacLogoGray.svg'
+import slideImagen1 from './slideImagen1.png'
+import slideImagen2 from './slideImagen2.png'
+import slideImagen3 from './slideImagen3.png'
+import slideImagen4 from './slideImagen4.png'
+import slideImagen5 from './slideImagen5.png'
+import slideImagen6 from './slideImagen6.png'
+
 export {
     demacLogo,
     menu,
@@ -46,5 +53,11 @@ export {
     belfiLogo,
     arrigoniLogo,
     minusIcon,
-    demacLogoGray
+    demacLogoGray,
+    slideImagen1,
+    slideImagen2,
+    slideImagen3,
+    slideImagen4,
+    slideImagen5,
+    slideImagen6
 }

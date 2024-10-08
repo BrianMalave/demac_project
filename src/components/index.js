@@ -7,12 +7,14 @@ import Form from "./Form";
 import Footer from "./Footer";
 import Project from "./Projects";
 import Partner from "./Partner";
+import Slider from "./Slider";
 export {
     Header,
     Hero,
     Field,
     Service,
     Project,
+    Slider,
     Partner,
     Contact,
     Form,

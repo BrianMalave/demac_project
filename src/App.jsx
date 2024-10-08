@@ -1,5 +1,5 @@
 import './styles/App.scss'
-import { Header, Hero, Field, Project, Service, Contact, Footer, Partner } from "./components"
+import { Header, Hero, Field, Project, Service, Contact, Footer, Partner, Slider } from "./components"
 const App = () => (
   <div>
     <div className='mainContainer mainContainerColor fixed p-0'>
@@ -17,6 +17,7 @@ const App = () => (
     <div id='project' className='mainContainer'>
         <Project />
     </div>
+        <Slider />
     <div id='partners' className='mainContainer pt-100'>
         <Partner />
     </div>
