@@ -14,23 +14,23 @@ const Field = () => (
       </div>
     </div>
     <div className="fieldImagesContainer">
-      <div className="fieldImagesSubContainer">
+      <div className="fieldImagesSubContainer motion-down">
         <img src={civiles} alt="Obras Civiles" className="fieldImages"/>
         <h2>Obras Civiles</h2>
       </div>
-      <div className="fieldImagesSubContainer">
+      <div className="fieldImagesSubContainer motion-up">
         <img src={industriales} alt="Obras Industriales" className="fieldImages"/>
         <h2>Industriales</h2>
       </div>
-      <div className="fieldImagesSubContainer">
+      <div className="fieldImagesSubContainer motion-up">
         <img src={mineria} alt="Obras Mineras" className="fieldImages"/>
         <h2>Mineras</h2>
       </div>
-      <div className="fieldImagesSubContainer">
+      <div className="fieldImagesSubContainer motion-up">
         <img src={maritima} alt="Obras Maritimas" className="fieldImages"/>
-        <h2>Maritimas</h2>
+        <h2>Marítimas</h2>
       </div>
-      <div className="fieldImagesSubContainer">
+      <div className="fieldImagesSubContainer motion-down">
         <img src={viales} alt="Obras Viales" className="fieldImages"/>
         <h2>Viales</h2>
       </div>

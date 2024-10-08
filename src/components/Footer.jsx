@@ -21,15 +21,15 @@ const Footer = () => (
         </ul>
         <ul>
           <li className="footerListTitle"><a href='#partners'>Partners</a></li>
-          <li><a className="foooterLink" href="#">Facebook</a></li>
+          {/* <li><a className="foooterLink" href="#">Facebook</a></li>
           <li><a className="foooterLink" href="#">Tumblr</a></li>
           <li><a className="foooterLink" href="#">Instagram</a></li>
           <li><a className="foooterLink" href="#">YouTube</a></li>
-          <li><a className="foooterLink" href="#">Twitter</a></li>
+          <li><a className="foooterLink" href="#">Twitter</a></li> */}
         </ul>
         <ul>
           <li className="footerListTitle"><a href='#contacto'>Contacto</a></li>
-          <li><a className="foooterLink" href="#">Formulario</a></li>
+          <li><a className="foooterLink" href="#contacto">Formulario</a></li>
           <li><a className="foooterLink" href="#">LinkedIn</a></li>
         </ul>
       </div>
