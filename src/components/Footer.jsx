@@ -30,7 +30,8 @@ const Footer = () => (
         <ul>
           <li className="footerListTitle"><a href='#contacto'>Contacto</a></li>
           <li><a className="foooterLink" href="#contacto">Formulario</a></li>
-          <li><a className="foooterLink" href="#">LinkedIn</a></li>
+          <li><a className="foooterLink" href="https://www.linkedin.com/company/constructora-demac">LinkedIn</a></li>
+          <li><a className="foooterLink" href="https://www.instagram.com/constructorademac?igsh=Mms2aHpmN3l0d2lu&utm_source=qr">Instagram</a></li>
         </ul>
       </div>
     </div>
