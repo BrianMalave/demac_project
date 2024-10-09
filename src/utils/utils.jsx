@@ -29,3 +29,22 @@ export const toggleDisclosure = (index, activeIndex, setActiveIndex) => {
   } 
   setActiveIndex(index)
 };
+
+export const elementObserver = (elements, callback, options = { threshold: 0.3 }) => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          callback(entry.target, true, index);
+        }, index * 200);
+      } else {
+        callback(entry.target, false);
+      }
+    });
+  }, options);
+
+  elements.forEach((element) => observer.observe(element));
+
+  return () => observer.disconnect();
+};
+

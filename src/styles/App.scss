@@ -209,25 +209,46 @@
 
 .motion-down {
   margin-top: 0;
-  transition: margin-top 0.5s ease;
 
   &:hover {
     margin-top: 65px;
+    transition: margin-top 0.5s ease;
   }
 }
 
 .motion-up {
   margin-top: 65px;
-  transition: margin-top 0.5s ease;
 
   &:hover {
     margin-top: 0;
+    transition: margin-top 0.5s ease;
   }
 }
 
 .fieldImages {
   border-radius: 20px;
 }
+
+.fieldImagesSubContainer {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.fieldImagesSubContainer.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fieldImagesSubContainer h2 {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fieldImagesSubContainer.animate h2 {
+  opacity: 1;
+}
+
 
 /******************************End Field_Section******************************/
 /******************************Start Service_Section******************************/
@@ -282,7 +303,7 @@
 
     @keyframes moveIn {
       from {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
       }
 
       to {
