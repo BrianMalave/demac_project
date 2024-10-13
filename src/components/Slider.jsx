@@ -32,7 +32,14 @@ const Slider = () => (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
       spaceBetween={0}  
-      slidesPerView={3}  
+      breakpoints={{                           
+        640: {                                  
+          slidesPerView: 1
+        },
+        1024: {                                  
+          slidesPerView: 3
+        }
+      }}
       // navigation  
       pagination={{ clickable: true }}  
       autoplay={{ 
@@ -43,7 +50,7 @@ const Slider = () => (
       speed={3000}
       style={swiperStyle}
     >
-      <SwiperSlide className=''>
+      <SwiperSlide>
         <div className="slide-content">
           <div className="triangle-topright"></div>
           <img src={slideImagen1} alt="Image1" />

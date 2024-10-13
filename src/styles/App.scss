@@ -9,10 +9,10 @@
 @use './var.scss' as l;
 @import './mixins.scss';
 
-.hideMobile {
-  background-color: red;
-  @include hideMobile;
-}
+// .hideMobile {
+//   background-color: red;
+//   @include hideMobile;
+// }
 
 .fixed {
   @include fixedPosition
@@ -24,14 +24,23 @@
 
 .pt-140 {
   padding-top: 140px !important;
+  // @media (width <= 990px) {
+  //   padding-top: 80px !important;
+  // }
 }
 
 .pt-100 {
   padding-top: 100px !important;
+  @media (width <= 990px) {
+    padding-top: 50px !important;
+  }
 }
 
 .pb-140 {
   padding-bottom: 140px !important;
+  @media (width <= 990px) {
+    padding-bottom: 80px !important;
+  }
 }
 
 .mr-0 {
@@ -48,8 +57,8 @@
 }
 
 .mainContainer {
-  @include paddingX;
   @include flex-center-x;
+  @include paddingX;
 }
 
 .mainContainerColor {
@@ -69,6 +78,9 @@
   width: l.$w-100;
   @include flex-center-between;
   @include paddingX;
+  @media (width <= 990px) {
+    height: 15vh;
+  }
 }
 
 .navLinkContainer {
@@ -76,6 +88,71 @@
   justify-content: end;
   flex: 1;
   list-style: none;
+
+  @media (width <= 990px) {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  display: none;
+
+  .menuIcon {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .menuMobileContainer {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    background-color: #D9D9D9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+    width: 220px;
+  
+    &.showMenu {
+      transform: scaleX(1);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 10px 0;
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .menuMobileLogoAlone {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    img {
+      width: 150px;
+    }
+  }
+
+  @media (width <= 990px) {
+    display: flex;
+  }
+}
+
+
+.menuIcon {
+  width: 30px;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .navLinks {
@@ -114,6 +191,11 @@
 .heroSubContainer {
   border-bottom: 1px solid l.$color-7;
   text-align: left;
+  @media (width <= 990px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .heroMessage {
@@ -124,6 +206,12 @@
   font-weight: 400;
   line-height: 84px;
   @include slowAppear;
+  @media (width <= 990px) {
+    width: 300px;
+    font-family: Axiforma;
+    font-size: 38px;
+    line-height: 45px;
+  }
 }
 
 .heroSubContainerTwo {
@@ -131,11 +219,25 @@
   align-items: center;
   justify-content: space-between;
   @include marginY;
+  @media (width <= 990px) {
+    flex-direction: column;
+  }
+}
+
+.heroImageContainer {
+  @media (width <= 990px) {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 .heroImage {
   height: 100px;
   width: 450px;
+  @media (width <= 990px) {
+    width: 250px;
+  }
 }
 
 .big-words-paragraph,
@@ -144,33 +246,62 @@
   @include fastAppear;
 }
 
+.containerP {
+  width: 600px;
+  @media (width <= 990px) {
+    width: 220px;
+  }
+}
+
+.margin-paragraph {
+  margin-left: 5px;
+}
+
 .heroParagraphContainer {
   color: l.$color-3;
   font-size: 22px;
   font-weight: 300;
   line-height: 25px;
   @include secondary-font-semibold;
+  @media (width <= 990px) {
+    width: 250px;
+    align-self: flex-start;
+    padding: 0 30px 0 30px;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+  }
 }
 
 /******************************End Hero_Section******************************/
 /******************************Start Field_Section******************************/
 .fieldSection {
-  @include marginY;
+  width: 100%;
   @include flex-center-column;
+  @include marginY;
 }
 
 .projectInfoContainer,
 .fieldInfoContainer {
   // width: 32.5rem;
   @include flex-center-column;
+  @media (width <= 990px) {
+    margin-bottom: 30px;
+  }
 }
 
 .fieldInfoTitleContainer {
   width: 880px;
+  @media (width <= 990px) {
+    width: 285px;
+  }
 }
 
 .fieldInfoDescription {
   width: 600px;
+  @media (width <= 990px) {
+    width: 255px;
+  }
 }
 
 .fieldTitle {
@@ -180,21 +311,31 @@
   font-weight: 500;
   line-height: 54px;
   text-align: center;
+  @media (width <= 990px) {
+      font-size: 28px;
+      line-height: 33px;
+  }
 }
 
 .projectDescription,
 .fieldDescription {
   color: l.$color-6;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 22px;
   text-align: center;
   @include secondary-font-regular;
+  @media (width <= 990px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .fieldImagesContainer {
   display: flex;
   gap: 18px;
-
+  @media (width <= 990px) {
+    flex-direction: column;    
+  }
 }
 
 .fieldImagesSubContainer {
@@ -209,10 +350,15 @@
 
 .motion-down {
   margin-top: 0;
-
   &:hover {
     margin-top: 65px;
     transition: margin-top 0.5s ease;
+    @media (width <= 990px) {
+      margin: 0;
+    }
+  }
+  @media (width <= 990px) {
+    margin: 0;
   }
 }
 
@@ -222,6 +368,12 @@
   &:hover {
     margin-top: 0;
     transition: margin-top 0.5s ease;
+    @media (width <= 990px) {
+      margin: 0;
+    }
+  }
+  @media (width <= 990px) {
+    margin: 0;
   }
 }
 
@@ -233,6 +385,9 @@
   opacity: 0;
   transform: translateY(-30px);
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  @media (width <= 990px) {
+    margin-top: 0;
+  }
 }
 
 .fieldImagesSubContainer.animate {
@@ -252,6 +407,14 @@
 
 /******************************End Field_Section******************************/
 /******************************Start Service_Section******************************/
+
+.serviceSection {
+
+  @media (width <= 990px) {
+    width: 100vw;
+  }
+}
+
 .serviceTitleContainer {
   border-top: 1px solid white;
   margin: 50px 0 60px 0;
@@ -269,6 +432,9 @@
 .serviceSubContainer {
   display: flex;
   align-items: stretch;
+  @media (width <= 990px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .serviceTitleDescription {
@@ -286,11 +452,17 @@
   flex-grow: 0;
   // right: 8rem;
   top: 18.5rem;
+  @media (width <= 990px) {
+    top: 3.5rem;
+  }
 }
 
 .serviceLogo {
   width: 700px;
   height: 150px;
+  @media (width <= 990px) {
+    width: 330px;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -315,6 +487,11 @@
 
 .serviceTextContainer {
   width: 580px;
+  @media (width <= 990px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .serviceSubTitleContainer {
@@ -328,7 +505,19 @@
   align-items: center;
   column-gap: 108px;
   margin-top: 110px;
+  @media (width <= 990px) {
+    margin-top: 70px;
+    flex-direction: column;
+  }
 
+  .mainContactInfoContainer {
+    @media (width <= 990px) {
+      display: flex;
+      flex-direction: column;
+      padding: 0 30px 0 30px;
+      margin-bottom: 30px;
+    }
+  }
   h4 {
     width: 380px;
     font-size: 18px;
@@ -336,6 +525,12 @@
     letter-spacing: -0.02em;
     color: l.$color-6;
     @include secondary-font-semibold;
+    @media (width <= 990px) {
+      width: 100%;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.02em;
+    }
   }
 
   h1 {
@@ -344,6 +539,19 @@
     line-height: 50px;
     color: l.$color-6;
     @include primary-font-regular;
+    @media (width <= 990px) {
+      width: 100%;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
+
+.contactForm {
+  @media (width <= 990px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -365,6 +573,12 @@ form {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  @media (width <= 990px) {
+    width: 100%;
+    max-width: 300px;
+    min-width: 300px;
+    height: 380px;
+  }
 }
 
 form .inputField {
@@ -427,10 +641,16 @@ button.swal2-confirm.swal2-styled {
 .projectSection {
   margin-top: 120px;
   @include flex-center-column;
+  @media (width <= 990px) {
+    margin-top: 70px;
+  }
 }
 
 .projectInfoContainer {
   width: 680px;
+  @media (width <= 990px) {
+    width: 290px;
+  }
 }
 
 .projectTitle {
@@ -441,12 +661,22 @@ button.swal2-confirm.swal2-styled {
   font-weight: 500;
   line-height: 54px;
   text-align: center;
+  @media (width <= 990px) {
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 
 .knowSomeButtonContainer {
   padding: 0 300px 0 300px;
   margin: 80px 0 26px 0;
   align-self: flex-start;
+  @media (width <= 990px) {
+    margin: 60px 0 25px 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .knowSomeButton {
@@ -471,13 +701,13 @@ button.swal2-confirm.swal2-styled {
 }
 
 .triangle-topright {
-  position: absolute; 
-  top: 0; 
-  right: 0; 
-  width: 0; 
-  height: 0; 
-  border-top: 100px solid white; 
-  border-left: 100px solid transparent; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 100px solid white;
+  border-left: 100px solid transparent;
 }
 
 .swiper-pagination-bullet-active {
@@ -488,17 +718,31 @@ button.swal2-confirm.swal2-styled {
 /******************************Start Partner_Section******************************/
 .partnerSection {
   width: l.$w-100;
+  @media (width <= 990px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
 }
 
 .partnerMainContainer {
   display: flex;
   padding: 60px;
   border-bottom: 1px solid #5B5A59;
+  @media (width <= 990px) {
+    padding: 0;
+    margin: 15px 0 15px 0;
+  }
 }
 
 .partnerTitleContainer {
   padding-left: 60px;
   width: 750px;
+  @media (width <= 990px) {
+    width: 280px;
+    padding-left: 0;
+  }
 
   .partnerTitle {
     font-size: 48px;
@@ -506,6 +750,10 @@ button.swal2-confirm.swal2-styled {
     line-height: 54px;
     color: l.$color-6;
     @include primary-font-medium;
+    @media (width <= 990px) {
+      font-size: 32px;
+      line-height: 38px;
+    }
   }
 }
 
@@ -513,6 +761,9 @@ button.swal2-confirm.swal2-styled {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  @media (width <= 990px) {
+    // flex-direction: column;
+  }
 }
 
 .partnerFieldTitle {
@@ -522,6 +773,10 @@ button.swal2-confirm.swal2-styled {
   text-transform: uppercase;
   color: l.$color-6;
   @include secondary-font-semibold;
+  @media (width <= 990px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 .partnerProjectName {
@@ -530,12 +785,20 @@ button.swal2-confirm.swal2-styled {
   text-align: left;
   color: l.$color-6;
   @include primary-font-semibold;
+  @media (width <= 990px) {
+    font-size: 14px;
+    line-height: 19px;
+  }
 
   .partnerPorjectLocation {
     font-size: 16px;
     line-height: 18px;
     text-align: left;
     @include secondary-font-light;
+    @media (width <= 990px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 }
 
@@ -547,6 +810,16 @@ button.swal2-confirm.swal2-styled {
   .partnerLogo {
     width: 300px;
     height: 80px;
+    @media (width <= 990px) {
+      width: 130px;
+    }
+  }
+  .partnerLogoIcafal {
+    width: 300px;
+    height: 80px;
+    @media (width <= 990px) {
+      width: 100px;
+    }
   }
 }
 
@@ -556,11 +829,20 @@ button.swal2-confirm.swal2-styled {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  @media (width <= 990px) {
+    flex-direction: row;
+    justify-content: initial;
+    align-items: initial;
+  }
 
   .partnerLogo {
     width: 300px;
     height: 80px;
     align-self: flex-start;
+    @media (width <= 990px) {
+      width: 130px;
+      height: 50px;
+    }
   }
 
   h3 {
@@ -569,12 +851,18 @@ button.swal2-confirm.swal2-styled {
     margin-bottom: 0;
     align-self: flex-start;
     @include secondary-font-light;
+    @media (width <= 990px) {
+      display: none;
+    }
   }
 }
 
 
 .partnerInfoContainer {
   width: 70%;
+  @media (width <= 990px) {
+    margin-bottom: 20px;
+  }
 }
 
 .clientContainer {
@@ -582,6 +870,9 @@ button.swal2-confirm.swal2-styled {
   grid-template-columns: 1fr 1fr;
   align-self: flex-start;
   align-items: center;
+  @media (width <= 990px) {
+    display: none;
+  }
 
   .partnerLogo {
     width: 160px;
@@ -598,6 +889,23 @@ button.swal2-confirm.swal2-styled {
   // gap: 140px;
   display: flex;
   justify-content: space-between;
+  @media (width <= 990px) {
+    flex-direction: column;
+  }
+}
+
+.footerLogoContainer img{
+  @media (width <= 990px) {
+    width: 165px;
+  }
+}
+
+.footerLogoContainer {
+  @media (width <= 990px) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px 0 40px;
+  }
 }
 
 .footerLogoContainer h1 {
@@ -611,7 +919,9 @@ button.swal2-confirm.swal2-styled {
 
 .footerMenuContainer {
   display: flex;
-
+  @media (width <= 990px) {
+    flex-direction: column;
+  }
   ul {
     list-style-type: none;
 
@@ -622,7 +932,6 @@ button.swal2-confirm.swal2-styled {
     a {
       color: l.$color-8;
       text-decoration: none;
-      @include secondary-font-regular;
     }
   }
 }
@@ -638,6 +947,7 @@ button.swal2-confirm.swal2-styled {
   font-size: 20px;
   font-weight: 400;
   line-height: 32px;
+  font-family: 'Axiforma' !important;
 }
 
 .disclaimerContainer {

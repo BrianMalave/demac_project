@@ -56,7 +56,7 @@ const Partner = () => (
     <div className="partnerMainContainer">
       <div className="partnerContainer">
         <div className="partnerLogoContainer">
-          <img src={icafalLogo} alt="icafal" className="partnerLogo" />
+          <img src={icafalLogo} alt="icafal" className="partnerLogoIcafal" />
         </div>
         <div className="partnerInfoContainer">
           <p className="partnerFieldTitle">

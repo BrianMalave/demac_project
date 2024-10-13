@@ -11,8 +11,9 @@ const Hero = () => (
       <div className='heroSubContainerTwo'>
         <div className='heroParagraphContainer'>
           <p><span className='big-words-paragraph' >Contamos con más de 30 años de trayectoria.</span></p>
-          <p>Nos apasiona desarrollar y construir obras de alto impacto que</p>
-          <p><span className='big-words-paragraph'>marcan la diferencia</span> en las comunidades.</p>
+          <p className='containerP'>Nos apasiona desarrollar y construir obras de alto impacto que
+          <span className='big-words-paragraph margin-paragraph'>marcan la diferencia</span> en las comunidades.
+          </p>
         </div>
         <div className='heroImageContainer'>
           <img className='heroImage' src={heroLogo} />

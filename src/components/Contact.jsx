@@ -4,7 +4,7 @@ import { phoneIcon, letterIcon } from '../assets/assets';
 
 const Contact = () => (
   <section className='contactSection'>
-    <div>
+    <div className='mainContactInfoContainer'>
       <div>
         <h4>¿Agendamos una reunión?</h4>
         <h1>Cuéntanos más de tu proyecto</h1>

@@ -21,6 +21,10 @@ import sacyrLogo from './sacyrLogo.svg'
 import belfiLogo from './belfiLogo.svg'
 import arrigoniLogo from './arrigoniLogo.svg'
 import minusIcon from './minusIcon.svg'
+import menuClose from './close-menu-icon.svg'
+import menuMobile from './menu-mobile.svg'
+import demacMenu from './demac-logo-menu.svg'
+import demacLogoAlone from './demacMenuLogoAlone.svg'
 import demacLogoGray from './demacLogoGray.svg'
 import slideImagen1 from './slideImagen1.png'
 import slideImagen2 from './slideImagen2.png'
@@ -54,6 +58,10 @@ export {
     arrigoniLogo,
     minusIcon,
     demacLogoGray,
+    menuClose,
+    demacMenu,
+    menuMobile,
+    demacLogoAlone,
     slideImagen1,
     slideImagen2,
     slideImagen3,
