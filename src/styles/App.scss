@@ -104,7 +104,7 @@
 
   .menuMobileContainer {
     position: absolute;
-    top: 25px;
+    top: 33px;
     right: 10px;
     background-color: #D9D9D9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -818,7 +818,7 @@ button.swal2-confirm.swal2-styled {
     width: 300px;
     height: 80px;
     @media (width <= 990px) {
-      width: 100px;
+      width: 90px;
     }
   }
 }
