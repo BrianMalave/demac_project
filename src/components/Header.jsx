@@ -8,7 +8,7 @@ const Header = () => {
 	return (
 		<nav className="navBar">
 			{/* Desktop */}
-			<a href="http://localhost:5173/">
+			<a href="/">
 				<img src={demacLogoGray} alt="Constructora Demac logo" className="logoImage" />
 			</a>
 			<ul className="navLinkContainer">
