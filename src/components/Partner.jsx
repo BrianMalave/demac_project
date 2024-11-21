@@ -9,7 +9,7 @@ const Partner = () => (
     <div className="partnerMainContainer">
       <div className="partnerContainer">
         <div className="partnerLogoContainer">
-          <img src={besalcoLogo} alt="besalco" className="partnerLogo" />
+          <img src={besalcoLogo} alt="besalco partner Demac" className="partnerLogo" />
         </div>
         <div className="partnerInfoContainer">
           <p className="partnerFieldTitle">
@@ -42,13 +42,13 @@ const Partner = () => (
           <div className="partnerProjectName">Construcción Puentes y Fosos, Ruta Nahuelbuta</div>
         </div>
         <div className="partnerLogoContainerAlt">
-          <img src={ferrovialLogo} alt="ferrovial" className="partnerLogo" />
+          <img src={ferrovialLogo} alt="ferrovial partner Demac" className="partnerLogo" />
           <h3>Clientes:</h3>
           <div className="clientContainer">
-            <img src={besalcoLogo} alt="" className="partnerLogo" />
-            <img src={sacyrLogo} alt="" className="clientLogo" />
-            <img src={arrigoniLogo} alt="" className="clientLogo" />
-            <img src={belfiLogo} alt="" className="clientLogo" />
+            <img src={besalcoLogo} alt="besalco partner Demac" className="partnerLogo" />
+            <img src={sacyrLogo} alt="sacyr partner Demac" className="clientLogo" />
+            <img src={arrigoniLogo} alt="arrigoni partner Demac" className="clientLogo" />
+            <img src={belfiLogo} alt="belfi partner Demac" className="clientLogo" />
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@ const Partner = () => (
     <div className="partnerMainContainer">
       <div className="partnerContainer">
         <div className="partnerLogoContainer">
-          <img src={icafalLogo} alt="icafal" className="partnerLogoIcafal" />
+          <img src={icafalLogo} alt="icafal partner Demac" className="partnerLogoIcafal" />
         </div>
         <div className="partnerInfoContainer">
           <p className="partnerFieldTitle">

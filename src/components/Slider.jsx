@@ -53,37 +53,37 @@ const Slider = () => (
       <SwiperSlide>
         <div className="slide-content">
           <div className="triangle-topright"></div>
-          <img src={slideImagen1} alt="Image1" />
+          <img src={slideImagen1} alt="Proyectos Demac" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className="slide-content">
           <div className="triangle-topright"></div>
-          <img src={slideImagen2} alt="Image2" />
+          <img src={slideImagen2} alt="Proyectos Demac" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className="slide-content">
           <div className="triangle-topright"></div>
-          <img src={slideImagen3} alt="Image3" />
+          <img src={slideImagen3} alt="Proyectos Demac" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className="slide-content">
           <div className="triangle-topright"></div>
-          <img src={slideImagen4} alt="Image4" />
+          <img src={slideImagen4} alt="Proyectos Demac" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className="slide-content">
           <div className="triangle-topright"></div>
-          <img src={slideImagen5} alt="Image5" />
+          <img src={slideImagen5} alt="Proyectos Demac" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className="slide-content">
           <div className="triangle-topright"></div>
-          <img src={slideImagen6} alt="Image6" />
+          <img src={slideImagen6} alt="Proyectos Demac" />
         </div>
       </SwiperSlide>
     </Swiper>

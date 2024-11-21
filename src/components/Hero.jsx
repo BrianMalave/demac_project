@@ -16,7 +16,7 @@ const Hero = () => (
           </p>
         </div>
         <div className='heroImageContainer'>
-          <img className='heroImage' src={heroLogo} />
+          <img className='heroImage' alt='Constructora Demac Logo' src={heroLogo} />
         </div>
       </div>
     </div>

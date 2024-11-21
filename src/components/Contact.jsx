@@ -12,13 +12,13 @@ const Contact = () => (
       </div>
       <div>
         <a className='contactLinks' href='mailto:contacto@constructorademac.cl'>
-          <img src={letterIcon} />
+          <img src={letterIcon} alt='Correo Demac' />
           contacto@constructorademac.cl
           </a>
       </div>
       <div>
         <a className='contactLinks' href='tel:56974993044'>
-        <img src={phoneIcon} />
+        <img src={phoneIcon} alt='Numero telefónico Demac' />
         (+56) 9 7499 304
         4</a>
       </div>

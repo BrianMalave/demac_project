@@ -31,23 +31,23 @@ const Field = () => {
       </div>
       <div className="fieldImagesContainer">
         <div className="fieldImagesSubContainer motion-down">
-          <img src={civiles} alt="Obras Civiles" className="fieldImages"/>
+          <img src={civiles} alt="Obras Civiles por Demac" className="fieldImages"/>
           <h2>Obras Civiles</h2>
         </div>
         <div className="fieldImagesSubContainer motion-up">
-          <img src={industriales} alt="Obras Industriales" className="fieldImages"/>
+          <img src={industriales} alt="Obras Industriales por Demac" className="fieldImages"/>
           <h2>Industriales</h2>
         </div>
         <div className="fieldImagesSubContainer motion-up">
-          <img src={mineria} alt="Obras Mineras" className="fieldImages"/>
+          <img src={mineria} alt="Obras Mineras por Demac" className="fieldImages"/>
           <h2>Mineras</h2>
         </div>
         <div className="fieldImagesSubContainer motion-up">
-          <img src={maritima} alt="Obras Maritimas" className="fieldImages"/>
+          <img src={maritima} alt="Obras Maritimas por Demac" className="fieldImages"/>
           <h2>Marítimas</h2>
         </div>
         <div className="fieldImagesSubContainer motion-down">
-          <img src={viales} alt="Obras Viales" className="fieldImages"/>
+          <img src={viales} alt="Obras Viales por Demac" className="fieldImages"/>
           <h2>Viales</h2>
         </div>
       </div>
