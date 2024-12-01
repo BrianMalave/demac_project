@@ -18,16 +18,9 @@ const Form = () => {
 
     formData.append("access_key", "5ffaed1f-d247-429e-a783-c8921b158512");
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const res = await fetch("https://api.web3forms.com/submit", {
+    const res = await fetch("https://api.web3forms.com/submit",  {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: json
+      body: formData
     }).then((res) => res.json());
 
     if (res.success) {

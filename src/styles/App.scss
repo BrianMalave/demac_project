@@ -199,8 +199,7 @@
 }
 
 .heroMessage {
-  width: 65rem;
-  // font-family: l.$font-1;
+  width: 100%;
   color: l.$color-3;
   font-size: 74px;
   font-weight: 400;
@@ -240,11 +239,23 @@
   }
 }
 
-.big-words-paragraph,
-.big-words {
+.big-words-paragraph {
   color: white;
   @include fastAppear;
 }
+
+.big-words {
+  color: white;
+  display: inline-block;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.big-words.fade {
+  opacity: 0;
+  transform: translateY(-10px); /* Desliza hacia arriba durante la transición */
+}
+
+
 
 .containerP {
   width: 600px;
@@ -728,8 +739,8 @@ button.swal2-confirm.swal2-styled {
 
 .partnerMainContainer {
   display: flex;
+  flex-direction: column;
   padding: 60px;
-  border-bottom: 1px solid #5B5A59;
   @media (width <= 990px) {
     padding: 0;
     margin: 15px 0 15px 0;
@@ -757,13 +768,52 @@ button.swal2-confirm.swal2-styled {
   }
 }
 
+.slide-Partner-content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  .slide-Partner-image {
+    height: fit-content;
+    align-self: center;
+  }
+}
+
 .partnerContainer {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 10px;
   @media (width <= 990px) {
     // flex-direction: column;
   }
+}
+
+.partnerProjectDescription p {
+    width: 600px;
+    @media (width <= 990px) {
+      width: 100%;
+    }
+}
+
+.partnerDescriptionContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  @media (width <= 990px) {
+    flex-direction: column;
+  }
+}
+
+.partnerProjectInfoClients {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  padding: 0;
+}
+
+.partnerProjectInfoClients.open {
+  max-height: 500px;
 }
 
 .partnerFieldTitle {
@@ -824,15 +874,12 @@ button.swal2-confirm.swal2-styled {
 }
 
 .partnerLogoContainerAlt {
-  // width: 30%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   @media (width <= 990px) {
-    flex-direction: row;
-    justify-content: initial;
-    align-items: initial;
+
   }
 
   .partnerLogo {
@@ -852,26 +899,34 @@ button.swal2-confirm.swal2-styled {
     align-self: flex-start;
     @include secondary-font-light;
     @media (width <= 990px) {
-      display: none;
+      margin-top: 0;
+      margin-bottom: 10px;
     }
   }
 }
 
 
 .partnerInfoContainer {
-  width: 70%;
+  width: 100%;
   @media (width <= 990px) {
     margin-bottom: 20px;
   }
 }
 
+.partnerProjectDate {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 39px;
+text-align: left;
+}
+
 .clientContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-self: flex-start;
+  // align-self: flex-start;
   align-items: center;
+  justify-items: center;
   @media (width <= 990px) {
-    display: none;
   }
 
   .partnerLogo {
@@ -1016,3 +1071,75 @@ button.swal2-confirm.swal2-styled {
     @include secondary-font-regular;
   }
 }
+
+//Swiper arrows Gallery
+
+.swiper-button-prev, 
+.swiper-button-next {
+  color: white;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 20px;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12px;
+}
+
+
+//Modal Quickview
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, 20px);
+    right: auto;
+  }
+  .swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, 20px);
+    left: auto;
+  }
+}
+
+.modal-content {
+  position: relative;
+  width: 80%;
+  height: 80%;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  // border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 9vw;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+  font-weight: lighter;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 5px 10px 10px 10px;
+  height: 13px;
+}
+

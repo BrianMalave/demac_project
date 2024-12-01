@@ -20,8 +20,12 @@ import icafalLogo from './icafalLogo.svg'
 import sacyrLogo from './sacyrLogo.svg'
 import belfiLogo from './belfiLogo.svg'
 import arrigoniLogo from './arrigoniLogo.svg'
+import asmarLogo from './asmarLogo.svg'
+import comsaLogo from './comsaLogo.svg'
 import minusIcon from './minusIcon.svg'
 import menuClose from './close-menu-icon.svg'
+import chevronRight from './chevron-right.svg'
+import chevronDown from './chevron-down.svg'
 import menuMobile from './menu-mobile.svg'
 import demacMenu from './demac-logo-menu.svg'
 import demacLogoAlone from './demacMenuLogoAlone.svg'
@@ -56,9 +60,13 @@ export {
     sacyrLogo,
     belfiLogo,
     arrigoniLogo,
+    comsaLogo,
+    asmarLogo,
     minusIcon,
     demacLogoGray,
     menuClose,
+    chevronRight,
+    chevronDown,
     demacMenu,
     menuMobile,
     demacLogoAlone,

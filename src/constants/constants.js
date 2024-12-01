@@ -1,3 +1,14 @@
+import {
+  besalcoLogo,
+  icafalLogo,
+  ferrovialLogo,
+  comsaLogo,
+  asmarLogo,
+  arrigoniLogo,
+  belfiLogo,
+  sacyrLogo
+} from '../assets/assets'
+
 export const navLinks = [
     {
       id: "nosotros",
@@ -50,4 +61,49 @@ export const disclosureInfo = [
       Contamos con la experiencia y el equipamiento necesarios para manejar estructuras de diferentes tamaños y complejidades, utilizando herramientas y técnicas especializadas que garantizan la seguridad y precisión del trabajo.
     `,
   }
+];
+
+export const solutions = [
+  "Solución Integral",
+  "Solución Personalizada",
+  "Solución de Ingeniería",
+  "Solución de Habilitación"
+];
+
+export const viales = [
+  {
+    title: "Terceras pistas tramo II y nueva plaza de peaje Angostura",
+    year: "2014",
+    description: "Ejecución paso superior águila sur, paso superior casino, montaje de cajones prefabricados y obras de arte.",
+    clients: [
+      { logo: ferrovialLogo, alt: "ferrovial partner Demac" },
+    ],
+  },
+  {
+    title: "Obras de Infraestructura y Superestructura Puente Bicentenario Oriente",
+    year: "2016 - 2027",
+    description: "Desmontaje de Puente Mecano provisorio sobre Río Bíobio luego del terremoto 27F, trabajos incluyeron desarme, traslado a regimiento Chacabuco y acopio en el mismo lugar.",
+    clients: [
+      { logo: besalcoLogo, alt: "besalco partner Demac" },
+      { logo: sacyrLogo, alt: "sacyr partner Demac" },
+      { logo: arrigoniLogo, alt: "arrigoni partner Demac" },
+      { logo: belfiLogo, alt: "belfi partner Demac" },
+    ],
+  },
+  {
+    title: "Construcción Puente Ferroviario",
+    year: "2017",
+    description: "Construcción de infraestructura de Ramal 6 Norte, Tramos Faltantes, Paso Superior San Pedro y Lazo 1 Sur, realizando labores de construcción de columnas, vigas de amarre, cabezales y estribos de puente.",
+    clients: [
+      { logo: besalcoLogo, alt: "besalco partner Demac" },
+    ],
+  },
+  {
+    title: "Construcción Puentes y Fosos, Ruta Nahuelbuta",
+    year: "2017",
+    description: "Descripción: Construcción de infraestructura de Ramal 6Norte, Tramos Faltantes, Paso Superior San Pedro y Lazo 1 Sur, realizando labores de construcción de columnas, vigas de amarre, cabezales y estribos de puente.",
+    clients: [
+      { logo: besalcoLogo, alt: "besalco partner Demac" },
+    ],
+  },
 ];
