@@ -6,7 +6,8 @@ import {
   asmarLogo,
   arrigoniLogo,
   belfiLogo,
-  sacyrLogo
+  sacyrLogo,
+  dragadosLogo
 } from '../assets/assets'
 
 export const navLinks = [
@@ -101,9 +102,63 @@ export const viales = [
   {
     title: "Construcción Puentes y Fosos, Ruta Nahuelbuta",
     year: "2017",
-    description: "Descripción: Construcción de infraestructura de Ramal 6Norte, Tramos Faltantes, Paso Superior San Pedro y Lazo 1 Sur, realizando labores de construcción de columnas, vigas de amarre, cabezales y estribos de puente.",
+    description: "Construcción de infraestructura de Ramal 6Norte, Tramos Faltantes, Paso Superior San Pedro y Lazo 1 Sur, realizando labores de construcción de columnas, vigas de amarre, cabezales y estribos de puente.",
     clients: [
       { logo: besalcoLogo, alt: "besalco partner Demac" },
     ],
   },
+];
+
+export const maritimas = [
+  {
+    title: "Reparación Molo 500 Norte Base Naval Talcahuano",
+    year: "Próximamente",
+    description: "Reparación y habilitación de nuevas redes de servicios, incluyendo agua potable, alcantarillado, red contra incendios y electricidad, en el sector Molo 500 Norte. Además, se realizó la pavimentación en adocreto de las vías, garantizando una infraestructura duradera y funcional para la zona.",
+    clients: [
+      { logo: besalcoLogo, alt: "besalco partner Demac" },
+      { logo: comsaLogo, alt: "comsa partner Demac" },
+      { logo: dragadosLogo, alt: "dragados partner Demac" },
+    ],
+  },
+  {
+    title: "Construcción Molo Sur Base Naval Talcahuano",
+    year: "Próximamente",
+    description: "Reparación de frentes de atraque mediante intervención en grietas y reconstrucción parcial de consolas de apoyo en vigas transversales. Incluye el montaje e instalación de nuevas defensas y bitas, asegurando la estabilidad estructural y la operatividad del área portuaria.",
+    clients: [
+      { logo: besalcoLogo, alt: "besalco partner Demac" },
+      { logo: comsaLogo, alt: "comsa partner Demac" },
+      { logo: dragadosLogo, alt: "dragados partner Demac" },
+    ],
+  },
+  {
+    title: "Reparaciones Filtraciones Dique Seco N°2 Asmar Thno",
+    year: "Próximamente",
+    description: "Construcción de infraestructura de Ramal 6 Norte, Tramos Faltantes, Paso Superior San Pedro y Lazo 1 Sur, realizando labores de construcción de columnas, vigas de amarre, cabezales y estribos de puente.",
+    clients: [
+      { logo: besalcoLogo, alt: "besalco partner Demac" },
+      { logo: comsaLogo, alt: "comsa partner Demac" },
+      { logo: dragadosLogo, alt: "dragados partner Demac"},
+    ],
+  },
+  {
+    title: "Rehabilitación redes AP y RCI Asmar Thno",
+    year: "Próximamente",
+    description: "Suministro, fabricación, instalación, pruebas y puesta en marcha de los sistemas de nuevas redes contra incendio y agua potable en la calle 34 de ASMAR. Además, se realizó la reparación y pintura de las oficinas del consorcio Dragados, Comsa y Besalco, junto con las oficinas de la inspección técnica de obras, asegurando la calidad y funcionalidad de las instalaciones.",
+    clients: [
+      { logo: besalcoLogo, alt: "besalco partner Demac"},
+      { logo: comsaLogo, alt: "comsa partner Demac"},
+      { logo: dragadosLogo, alt: "dragados partner Demac"},
+    ],
+  },
+];
+
+export const aeroportuarias = [
+  {
+    title: "Ampliación pistas de aterrizaje Aeródromo, Obras de saeamiento, Construcción de Edificios y Salas de Bomba Carriel Sur",
+    year: "Próximamente",
+    description: "Incluye excavaciones masivas, rellenos estructurales y hormigonado de nuevas pistas de aterrizaje. También se ejecutó la construcción de cajones dobles y obras de arte para las pistas, junto con la preparación e instalación de enfierradura para edificios de la DGAC, cajones, estanques y salas de bombas, asegurando la funcionalidad y seguridad de la infraestructura aeroportuaria.",
+    clients: [
+      { logo: icafalLogo, alt: "icafal partner Demac" }
+    ],
+  }
 ];

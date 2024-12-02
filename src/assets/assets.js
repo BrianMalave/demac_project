@@ -21,6 +21,7 @@ import sacyrLogo from './sacyrLogo.svg'
 import belfiLogo from './belfiLogo.svg'
 import arrigoniLogo from './arrigoniLogo.svg'
 import asmarLogo from './asmarLogo.svg'
+import dragadosLogo from './dragadosLogo.svg'
 import comsaLogo from './comsaLogo.svg'
 import minusIcon from './minusIcon.svg'
 import menuClose from './close-menu-icon.svg'
@@ -62,6 +63,7 @@ export {
     arrigoniLogo,
     comsaLogo,
     asmarLogo,
+    dragadosLogo,
     minusIcon,
     demacLogoGray,
     menuClose,

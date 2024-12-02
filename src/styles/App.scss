@@ -14,6 +14,10 @@
 //   @include hideMobile;
 // }
 
+.obra-section {
+  scroll-margin-top: 200px;
+}
+
 .fixed {
   @include fixedPosition
 }
@@ -356,6 +360,9 @@
     line-height: 28px;
     text-align: center;
     @include secondary-font-semibold;
+  }
+  a {
+    text-decoration: none;
   }
 }
 
