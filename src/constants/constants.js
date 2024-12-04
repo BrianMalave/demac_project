@@ -101,9 +101,10 @@ export const viales = [
   {
     title: "Construcción Puentes y Fosos, Ruta Nahuelbuta",
     year: "2017",
-    description: "Construcción de infraestructura de Ramal 6Norte, Tramos Faltantes, Paso Superior San Pedro y Lazo 1 Sur, realizando labores de construcción de columnas, vigas de amarre, cabezales y estribos de puente.",
+    description: "Se llevó a cabo la construcción de puentes con estructuras de alta resistencia, diseñados para soportar el tráfico pesado. Además, se implementaron sistemas de drenaje, incluidos fosos, para optimizar la evacuación de aguas pluviales.",
     clients: [
       { logo: besalcoLogo, alt: "besalco partner Demac" },
+      { logo: belfiLogo, alt: "belfi partner Demac" },
     ],
   },
 ];
@@ -114,9 +115,9 @@ export const maritimas = [
     year: "Próximamente",
     description: "Reparación y habilitación de nuevas redes de servicios, incluyendo agua potable, alcantarillado, red contra incendios y electricidad, en el sector Molo 500 Norte. Además, se realizó la pavimentación en adocreto de las vías, garantizando una infraestructura duradera y funcional para la zona.",
     clients: [
+      { logo: dragadosLogo, alt: "dragados partner Demac" },
       { logo: besalcoLogo, alt: "besalco partner Demac" },
       { logo: comsaLogo, alt: "comsa partner Demac" },
-      { logo: dragadosLogo, alt: "dragados partner Demac" },
     ],
   },
   {
@@ -124,9 +125,9 @@ export const maritimas = [
     year: "Próximamente",
     description: "Reparación de frentes de atraque mediante intervención en grietas y reconstrucción parcial de consolas de apoyo en vigas transversales. Incluye el montaje e instalación de nuevas defensas y bitas, asegurando la estabilidad estructural y la operatividad del área portuaria.",
     clients: [
+      { logo: dragadosLogo, alt: "dragados partner Demac" },
       { logo: besalcoLogo, alt: "besalco partner Demac" },
       { logo: comsaLogo, alt: "comsa partner Demac" },
-      { logo: dragadosLogo, alt: "dragados partner Demac" },
     ],
   },
   {
@@ -134,9 +135,9 @@ export const maritimas = [
     year: "Próximamente",
     description: "Construcción de infraestructura de Ramal 6 Norte, Tramos Faltantes, Paso Superior San Pedro y Lazo 1 Sur, realizando labores de construcción de columnas, vigas de amarre, cabezales y estribos de puente.",
     clients: [
+      { logo: dragadosLogo, alt: "dragados partner Demac"},
       { logo: besalcoLogo, alt: "besalco partner Demac" },
       { logo: comsaLogo, alt: "comsa partner Demac" },
-      { logo: dragadosLogo, alt: "dragados partner Demac"},
     ],
   },
   {
@@ -144,9 +145,9 @@ export const maritimas = [
     year: "Próximamente",
     description: "Suministro, fabricación, instalación, pruebas y puesta en marcha de los sistemas de nuevas redes contra incendio y agua potable en la calle 34 de ASMAR. Además, se realizó la reparación y pintura de las oficinas del consorcio Dragados, Comsa y Besalco, junto con las oficinas de la inspección técnica de obras, asegurando la calidad y funcionalidad de las instalaciones.",
     clients: [
+      { logo: dragadosLogo, alt: "dragados partner Demac"},
       { logo: besalcoLogo, alt: "besalco partner Demac"},
       { logo: comsaLogo, alt: "comsa partner Demac"},
-      { logo: dragadosLogo, alt: "dragados partner Demac"},
     ],
   },
 ];
@@ -192,7 +193,8 @@ export const industriales = [
     year: "2016 - 2017",
     description: "Desmontaje de Puente Mecano provisorio sobre Río Bíobio luego del terremoto 27F , trabajos incluyeron desarme, traslado a regimiento Chacabuco y acopio en el mismo lugar.",
     clients: [
-      { logo: frutillarLogo, alt: "frutillar partner Demac" }
+      { logo: besalcoLogo, alt: "besalco partner Demac"},
+      { logo: arrigoniLogo, alt: "arrigoni partner Demac" }
     ],
   },
   {
@@ -200,8 +202,7 @@ export const industriales = [
     year: "2022",
     description: "Movimiento de tierras y montaje de estructuras.",
     clients: [
-      { logo: besalcoLogo, alt: "besalco partner Demac"},
-      { logo: comsaLogo, alt: "comsa partner Demac"}
+      { logo: besalcoLogo, alt: "besalco partner Demac"}
     ],
   }
 ];
