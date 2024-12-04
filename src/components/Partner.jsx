@@ -14,13 +14,14 @@ import {
   chevronDown,
   chevronRight
 } from '../assets/assets';
-import { viales, maritimas, aeroportuarias } from '../constants/constants';
+import { viales, maritimas, aeroportuarias, industriales } from '../constants/constants';
 
 const Partner = () => {
 
   const [openIndexViales, setOpenIndexViales] = useState(null);
   const [openIndexMaritimas, setOpenIndexMaritimas] = useState(null);
   const [openIndexAero, setOpenIndexAero] = useState(null);
+  const [openIndexIndustriales, setOpenIndexIndustriales] = useState(null);
 
 
   const handleToggleViales = (index) => {
@@ -31,6 +32,9 @@ const Partner = () => {
   };
   const handleToggleAero = (index) => {
     setOpenIndexAero(openIndexAero === index ? null : index);
+  };
+  const handleToggleIndustriales = (index) => {
+    setOpenIndexIndustriales(openIndexIndustriales === index ? null : index);
   };
 
   const images = [
@@ -158,7 +162,7 @@ const Partner = () => {
                 className={`partnerProjectInfoClients ${openIndexMaritimas === index ? "open" : ""}`}
               >
                 <div className="partnerFirstContainer">
-                  <div className="partnerProjectDate">Año: {maritima.year}</div>
+                  {/* <div className="partnerProjectDate">Año: {maritima.year}</div> */}
                 </div>
                 <div className="partnerDescriptionContainer">
                   <div className="partnerProjectDescription">
@@ -185,7 +189,7 @@ const Partner = () => {
           ))}
         </section>
 
-        <section id="obras-aeropotuarias">
+        <section id="obras-aeropotuarias" class="obra-section">
           {/* Obras Aeroportuarias */}
           <h3 className="partnerFieldTitle">Obras Aeroportuarias</h3>
           {aeroportuarias.map((aero, index) => (
@@ -224,6 +228,60 @@ const Partner = () => {
                     <h3>Clientes:</h3>
                     <div className="clientContainer">
                       {aero.clients.map((client, i) => (
+                        <img
+                          key={i}
+                          src={client.logo}
+                          alt={client.alt}
+                          className="clientLogo"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </section>
+
+        <section id="obras-industriales" class="obra-section">
+          {/* Obras industriales */}
+          <h3 className="partnerFieldTitle">Obras Industriales</h3>
+          {industriales.map((indu, index) => (
+            <div className="partnerContainer" key={index}>
+              <div
+                className="partnerProjectName"
+                onClick={() => handleToggleIndustriales(index)}
+                style={{
+                  cursor: "pointer",
+                  fontWeight: "bold",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center"
+                }}
+              >
+                {indu.title}
+                <img
+                  src={openIndexIndustriales === index ? chevronDown : chevronRight}
+                  alt={openIndexIndustriales === index ? "Chevron Down" : "Chevron Right"}
+                  style={{ width: "30px", height: "30px" }}
+                />
+              </div>
+              <div
+                className={`partnerProjectInfoClients ${openIndexIndustriales === index ? "open" : ""}`}
+              >
+                <div className="partnerFirstContainer">
+                  <div className="partnerProjectDate">Año: {indu.year}</div>
+                </div>
+                <div className="partnerDescriptionContainer">
+                  <div className="partnerProjectDescription">
+                    <p>
+                      <strong className="descriptionParagraph">Descripción:</strong> {indu.description}
+                    </p>
+                  </div>
+                  <div className="partnerLogoContainerAlt">
+                    <h3>Clientes:</h3>
+                    <div className="clientContainer">
+                      {indu.clients.map((client, i) => (
                         <img
                           key={i}
                           src={client.logo}

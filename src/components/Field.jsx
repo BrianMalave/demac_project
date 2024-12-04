@@ -31,13 +31,13 @@ const Field = () => {
       </div>
       <div className="fieldImagesContainer">
         <div className="fieldImagesSubContainer motion-down">
-          <a href="#obras-civiles">
+          <a href="#partners">
             <img src={civiles} alt="Obras Civiles por Demac" className="fieldImages" />
             <h2>Obras Civiles</h2>
           </a>
         </div>
         <div className="fieldImagesSubContainer motion-up">
-          <a href="#obras-indutriales">
+          <a href="#obras-industriales">
             <img src={industriales} alt="Obras Industriales por Demac" className="fieldImages" />
             <h2>Industriales</h2>
           </a>

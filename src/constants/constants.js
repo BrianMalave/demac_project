@@ -7,7 +7,8 @@ import {
   arrigoniLogo,
   belfiLogo,
   sacyrLogo,
-  dragadosLogo
+  dragadosLogo,
+  frutillarLogo
 } from '../assets/assets'
 
 export const navLinks = [
@@ -159,6 +160,50 @@ export const aeroportuarias = [
     description: "Incluye excavaciones masivas, rellenos estructurales y hormigonado de nuevas pistas de aterrizaje. También se ejecutó la construcción de cajones dobles y obras de arte para las pistas, junto con la preparación e instalación de enfierradura para edificios de la DGAC, cajones, estanques y salas de bombas, asegurando la funcionalidad y seguridad de la infraestructura aeroportuaria.",
     clients: [
       { logo: icafalLogo, alt: "icafal partner Demac" }
+    ],
+  }
+];
+
+export const industriales = [
+  {
+    title: "Montaje de equipos industriales Frutillar",
+    year: "2006",
+    description: "Montaje de equipos REDA.",
+    clients: [
+      { logo: frutillarLogo, alt: "frutillar partner Demac" }
+    ],
+  },
+  {
+    title: "Hidroeléctrica San Andrés",
+    year: "2012",
+    description: "Montaje y soldadura tubería de acero.",
+    clients: [
+      { logo: icafalLogo, alt: "icafal partner Demac" }
+    ],
+  },
+  {
+    title: "Ampliación Planta Lechera",
+    year: "2006 - 2008",
+    description: "Montaje y soldadura tubería de acero pipe rack de servicio y proceso, montaje de caldera chips.",
+    clients: [
+      { logo: frutillarLogo, alt: "frutillar partner Demac" }
+    ],
+  },
+  {
+    title: "Desarme, traslado y acopio de Puente Mecano",
+    year: "2016 - 2017",
+    description: "Desmontaje de Puente Mecano provisorio sobre Río Bíobio luego del terremoto 27F , trabajos incluyeron desarme, traslado a regimiento Chacabuco y acopio en el mismo lugar.",
+    clients: [
+      { logo: frutillarLogo, alt: "frutillar partner Demac" }
+    ],
+  },
+  {
+    title: "Proyecto MAPA",
+    year: "2022",
+    description: "Movimiento de tierras y montaje de estructuras.",
+    clients: [
+      { logo: besalcoLogo, alt: "besalco partner Demac"},
+      { logo: comsaLogo, alt: "comsa partner Demac"}
     ],
   }
 ];

@@ -31,6 +31,7 @@ import menuMobile from './menu-mobile.svg'
 import demacMenu from './demac-logo-menu.svg'
 import demacLogoAlone from './demacMenuLogoAlone.svg'
 import demacLogoGray from './demacLogoGray.svg'
+import frutillarLogo from './frutillarLogo.svg'
 import slideImagen1 from './slideImagen1.png'
 import slideImagen2 from './slideImagen2.png'
 import slideImagen3 from './slideImagen3.png'
@@ -64,6 +65,7 @@ export {
     comsaLogo,
     asmarLogo,
     dragadosLogo,
+    frutillarLogo,
     minusIcon,
     demacLogoGray,
     menuClose,
