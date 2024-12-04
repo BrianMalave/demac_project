@@ -87,9 +87,7 @@ export const viales = [
     description: "Desmontaje de Puente Mecano provisorio sobre Río Bíobio luego del terremoto 27F, trabajos incluyeron desarme, traslado a regimiento Chacabuco y acopio en el mismo lugar.",
     clients: [
       { logo: besalcoLogo, alt: "besalco partner Demac" },
-      { logo: sacyrLogo, alt: "sacyr partner Demac" },
-      { logo: arrigoniLogo, alt: "arrigoni partner Demac" },
-      { logo: belfiLogo, alt: "belfi partner Demac" },
+      { logo: arrigoniLogo, alt: "arrigoni partner Demac" }
     ],
   },
   {
@@ -97,7 +95,7 @@ export const viales = [
     year: "2017",
     description: "Construcción de infraestructura de Ramal 6 Norte, Tramos Faltantes, Paso Superior San Pedro y Lazo 1 Sur, realizando labores de construcción de columnas, vigas de amarre, cabezales y estribos de puente.",
     clients: [
-      { logo: besalcoLogo, alt: "besalco partner Demac" },
+      { logo: sacyrLogo, alt: "sacyr partner Demac" },
     ],
   },
   {
