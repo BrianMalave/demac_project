@@ -22,10 +22,13 @@ const Partner = () => {
   };
 
   const handleToggle = (tab, index) => {
-    setOpenIndexes((prevState) => ({
-      ...prevState,
-      [tab]: prevState[tab] === index ? null : index
-    }));
+    setOpenIndexes((prevState) => {
+      const newState = {
+        ...prevState,
+        [tab]: prevState[tab] === index ? null : index
+      };
+      return newState;
+    });
   };
 
   const images = [
@@ -63,9 +66,8 @@ const Partner = () => {
           />
         </div>
         <div
-          className={`partnerProjectInfoClients ${
-            openIndexes[tabKey] === index ? "open" : ""
-          }`}
+          className={`partnerProjectInfoClients ${openIndexes[tabKey] === index ? "open" : ""
+            }`}
         >
           <div className="partnerFirstContainer">
             <div className="partnerProjectDate">Año: {obra.year}</div>
@@ -170,9 +172,8 @@ const Partner = () => {
           {renderObras(viales, "viales")}
         </section>
         <section
-          className={`obra-section ${
-            activeTab === "maritimas" ? "active" : ""
-          }`}
+          className={`obra-section ${activeTab === "maritimas" ? "active" : ""
+            }`}
         >
           {renderObras(maritimas, "maritimas")}
         </section>
@@ -182,9 +183,8 @@ const Partner = () => {
           {renderObras(aeroportuarias, "aero")}
         </section>
         <section
-          className={`obra-section ${
-            activeTab === "industriales" ? "active" : ""
-          }`}
+          className={`obra-section ${activeTab === "industriales" ? "active" : ""
+            }`}
         >
           {renderObras(industriales, "industriales")}
         </section>
