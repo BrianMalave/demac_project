@@ -7,6 +7,7 @@ import 'swiper/css/autoplay';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import {
   arrowDown,
+  closeButtonModal,
   slideImagen1,
   slideImagen2,
   slideImagen3,
@@ -50,6 +51,15 @@ const Slider = () => {
       {isModalOpen && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content">
+            {/* Botón de cierre */}
+            <button
+              className="close-button"
+              onClick={() => setIsModalOpen(false)}
+              aria-label="Cerrar modal"
+            >
+              &times;
+            </button>
+
             <Swiper
               modules={[Navigation, Pagination]}
               navigation={true}

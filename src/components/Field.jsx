@@ -37,25 +37,25 @@ const Field = () => {
           </a>
         </div>
         <div className="fieldImagesSubContainer motion-up">
-          <a href="#obras-industriales">
+          <a href="#partners">
             <img src={industriales} alt="Obras Industriales por Demac" className="fieldImages" />
             <h2>Industriales</h2>
           </a>
         </div>
         <div className="fieldImagesSubContainer motion-up">
-          <a href="#obras-mineras">
+          <a href="#partners">
             <img src={mineria} alt="Obras Mineras por Demac" className="fieldImages" />
             <h2>Mineras</h2>
           </a>
         </div>
         <div className="fieldImagesSubContainer motion-up">
-          <a href="#obras-maritimas">
+          <a href="#partners">
             <img src={maritima} alt="Obras Maritimas por Demac" className="fieldImages" />
             <h2>Marítimas</h2>
           </a>
         </div>
         <div className="fieldImagesSubContainer motion-down">
-          <a href="#obras-viales">
+          <a href="#partners">
             <img src={viales} alt="Obras Viales por Demac" className="fieldImages" />
             <h2>Viales</h2>
           </a>

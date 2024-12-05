@@ -800,6 +800,7 @@ button.swal2-confirm.swal2-styled {
     width: 600px;
     @media (width <= 990px) {
       width: 100%;
+      font-size: 14px;
     }
 }
 
@@ -836,15 +837,20 @@ button.swal2-confirm.swal2-styled {
   }
 }
 
+.partnerProjectName:hover {
+  color: l.$color-6;
+}
+
 .partnerProjectName {
   font-size: 28px;
   line-height: 38px;
   text-align: left;
-  color: l.$color-6;
+  color: l.$color-9;
   @include primary-font-semibold;
   @media (width <= 990px) {
     font-size: 14px;
     line-height: 19px;
+    color: l.$color-6;
   }
 
   .partnerPorjectLocation {
@@ -925,12 +931,14 @@ button.swal2-confirm.swal2-styled {
   font-weight: 500;
   line-height: 39px;
 text-align: left;
+@media (width <= 990px) {
+  font-size: 16px;
+}
 }
 
 .clientContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  // align-self: flex-start;
   align-items: center;
   justify-items: center;
   @media (width <= 990px) {
@@ -940,6 +948,91 @@ text-align: left;
     width: 160px;
   }
 }
+
+.partnerMainContainer {
+  position: relative;
+}
+.obra-section {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @media (width <= 990px) {
+    width: 90vw;
+  }
+}
+
+.obra-section.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  position: relative;
+}
+
+.partnerProjectInfoClients {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.partnerProjectInfoClients.open {
+  max-height: 300px;
+}
+
+.tabContainer {
+  gap: 4rem;
+  display: flex;
+  border-bottom: 1px solid #5B5A59;
+  margin-top: 2rem;
+  @media (width <= 990px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+        border-bottom: 0;
+  }
+}
+
+button.tabButton {
+  color: l.$color-9;
+  border: none;
+  background: white;
+  font-family: SF Pro;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+
+  @media (width <= 990px) {
+    font-size: 14px;
+    color: l.$color-6;
+    border-bottom: 1px solid #5B5A59;
+  }
+}
+
+button.tabButton.active,
+button.tabButton:hover {
+  color: l.$color-6;
+}
+
+.spacer {
+  border-right: 1px solid;
+  background: #5B5A59;
+  margin-bottom: 12px;
+  @media (width <= 990px) {
+    display: none;
+}
+}
+
 
 /******************************End Partner_Section******************************/
 /******************************Start Footer_Section******************************/
@@ -1150,3 +1243,21 @@ text-align: left;
   height: 13px;
 }
 
+.close-button {
+  font-size: 0;
+  position: absolute;
+  top: -40px; 
+  right: 40px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+  &::before {
+    content: "";
+    display: block !important;
+    background-image: url('../assets/close-button-modal.svg');
+    width: 25px;
+    height: 25px;
+  }
+}

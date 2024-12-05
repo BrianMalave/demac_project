@@ -1,40 +1,31 @@
 import { useState } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import {
   besalcoLogo,
   icafalLogo,
   ferrovialLogo,
   comsaLogo,
   asmarLogo,
-  arrigoniLogo,
-  belfiLogo,
-  sacyrLogo,
   chevronDown,
   chevronRight
-} from '../assets/assets';
-import { viales, maritimas, aeroportuarias, industriales } from '../constants/constants';
+} from "../assets/assets";
+import { viales, maritimas, aeroportuarias, industriales } from "../constants/constants";
 
 const Partner = () => {
+  const [activeTab, setActiveTab] = useState("viales");
+  const [openIndexes, setOpenIndexes] = useState({});
 
-  const [openIndexViales, setOpenIndexViales] = useState(null);
-  const [openIndexMaritimas, setOpenIndexMaritimas] = useState(null);
-  const [openIndexAero, setOpenIndexAero] = useState(null);
-  const [openIndexIndustriales, setOpenIndexIndustriales] = useState(null);
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
 
-
-  const handleToggleViales = (index) => {
-    setOpenIndexViales(openIndexViales === index ? null : index);
-  };
-  const handleToggleMaritimas = (index) => {
-    setOpenIndexMaritimas(openIndexMaritimas === index ? null : index);
-  };
-  const handleToggleAero = (index) => {
-    setOpenIndexAero(openIndexAero === index ? null : index);
-  };
-  const handleToggleIndustriales = (index) => {
-    setOpenIndexIndustriales(openIndexIndustriales === index ? null : index);
+  const handleToggle = (tab, index) => {
+    setOpenIndexes((prevState) => ({
+      ...prevState,
+      [tab]: prevState[tab] === index ? null : index
+    }));
   };
 
   const images = [
@@ -46,14 +37,71 @@ const Partner = () => {
   ];
 
   const swiperStyle = {
-    width: '100%',
-    height: '140px'
+    width: "100%",
+    height: "140px"
+  };
+
+  const renderObras = (obras, tabKey) => {
+    return obras.map((obra, index) => (
+      <div className="partnerContainer" key={index}>
+        <div
+          className="partnerProjectName"
+          onClick={() => handleToggle(tabKey, index)}
+          style={{
+            cursor: "pointer",
+            fontWeight: "bold",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center"
+          }}
+        >
+          {obra.title}
+          <img
+            src={openIndexes[tabKey] === index ? chevronDown : chevronRight}
+            alt={openIndexes[tabKey] === index ? "Chevron Down" : "Chevron Right"}
+            style={{ width: "30px", height: "30px" }}
+          />
+        </div>
+        <div
+          className={`partnerProjectInfoClients ${
+            openIndexes[tabKey] === index ? "open" : ""
+          }`}
+        >
+          <div className="partnerFirstContainer">
+            <div className="partnerProjectDate">Año: {obra.year}</div>
+          </div>
+          <div className="partnerDescriptionContainer">
+            <div className="partnerProjectDescription">
+              <p>
+                <strong className="descriptionParagraph">Descripción:</strong>{" "}
+                {obra.description}
+              </p>
+            </div>
+            <div className="partnerLogoContainerAlt">
+              <h3>Clientes:</h3>
+              <div className="clientContainer">
+                {obra.clients.map((client, i) => (
+                  <img
+                    key={i}
+                    src={client.logo}
+                    alt={client.alt}
+                    className="clientLogo"
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ));
   };
 
   return (
-    <section className='partnerSection'>
-      <div className='partnerTitleContainer'>
-        <h1 className="partnerTitle">Partners que nos han elegido por nuestra experiencia</h1>
+    <section className="partnerSection">
+      <div className="partnerTitleContainer">
+        <h1 className="partnerTitle">
+          Partners que nos han elegido por nuestra experiencia
+        </h1>
       </div>
 
       {/* SLIDERS PARTNER */}
@@ -73,228 +121,72 @@ const Partner = () => {
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <div className="slide-Partner-content">
-              <img className="slide-Partner-image" src={image} alt={`Partner Demac ${index + 1}`} />
+              <img
+                className="slide-Partner-image"
+                src={image}
+                alt={`Partner Demac ${index + 1}`}
+              />
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {/* DISCLOSURE LAYOUT */}
+      {/* TAB BUTTONS */}
+      <div className="tabContainer">
+        <button
+          className={`tabButton ${activeTab === "viales" ? "active" : ""}`}
+          onClick={() => handleTabChange("viales")}
+        >
+          Obras Viales
+        </button>
+        <div className="spacer"></div>
+        <button
+          className={`tabButton ${activeTab === "maritimas" ? "active" : ""}`}
+          onClick={() => handleTabChange("maritimas")}
+        >
+          Obras Marítimas
+        </button>
+        <div className="spacer"></div>
+        <button
+          className={`tabButton ${activeTab === "aero" ? "active" : ""}`}
+          onClick={() => handleTabChange("aero")}
+        >
+          Obras Aeroportuarias
+        </button>
+        <div className="spacer"></div>
+        <button
+          className={`tabButton ${activeTab === "industriales" ? "active" : ""}`}
+          onClick={() => handleTabChange("industriales")}
+        >
+          Obras Industriales
+        </button>
+      </div>
+
+      {/* TABS CONTENT */}
       <div className="partnerMainContainer">
-        <section id="obras-viales" class="obra-section">
-          {/* Obras Viales */}
-          <h3 className="partnerFieldTitle">Obras Viales</h3>
-          {viales.map((vial, index) => (
-            <div className="partnerContainer" key={index}>
-              <div
-                className="partnerProjectName"
-                onClick={() => handleToggleViales(index)}
-                style={{
-                  cursor: "pointer",
-                  fontWeight: "bold",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center"
-                }}
-              >
-                {vial.title}
-                <img
-                  src={openIndexViales === index ? chevronDown : chevronRight}
-                  alt={openIndexViales === index ? "Chevron Down" : "Chevron Right"}
-                  style={{ width: "30px", height: "30px" }}
-                />
-              </div>
-              <div
-                className={`partnerProjectInfoClients ${openIndexViales === index ? "open" : ""}`}
-              >
-                <div className="partnerFirstContainer">
-                  <div className="partnerProjectDate">Año: {vial.year}</div>
-                </div>
-                <div className="partnerDescriptionContainer">
-                  <div className="partnerProjectDescription">
-                    <p>
-                      <strong className="descriptionParagraph">Descripción:</strong> {vial.description}
-                    </p>
-                  </div>
-                  <div className="partnerLogoContainerAlt">
-                    <h3>Clientes:</h3>
-                    <div className="clientContainer">
-                      {vial.clients.map((client, i) => (
-                        <img
-                          key={i}
-                          src={client.logo}
-                          alt={client.alt}
-                          className="clientLogo"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+        <section
+          className={`obra-section ${activeTab === "viales" ? "active" : ""}`}
+        >
+          {renderObras(viales, "viales")}
         </section>
-
-        <section id="obras-maritimas" class="obra-section">
-          {/* Obras Marítimas */}
-          <h3 className="partnerFieldTitle">Obras Marítimas</h3>
-          {maritimas.map((maritima, index) => (
-            <div className="partnerContainer" key={index}>
-              <div
-                className="partnerProjectName"
-                onClick={() => handleToggleMaritimas(index)}
-                style={{
-                  cursor: "pointer",
-                  fontWeight: "bold",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center"
-                }}
-              >
-                {maritima.title}
-                <img
-                  src={openIndexMaritimas === index ? chevronDown : chevronRight}
-                  alt={openIndexMaritimas === index ? "Chevron Down" : "Chevron Right"}
-                  style={{ width: "30px", height: "30px" }}
-                />
-              </div>
-              <div
-                className={`partnerProjectInfoClients ${openIndexMaritimas === index ? "open" : ""}`}
-              >
-                <div className="partnerFirstContainer">
-                  {/* <div className="partnerProjectDate">Año: {maritima.year}</div> */}
-                </div>
-                <div className="partnerDescriptionContainer">
-                  <div className="partnerProjectDescription">
-                    <p>
-                      <strong className="descriptionParagraph">Descripción:</strong> {maritima.description}
-                    </p>
-                  </div>
-                  <div className="partnerLogoContainerAlt">
-                    <h3>Clientes:</h3>
-                    <div className="clientContainer">
-                      {maritima.clients.map((client, i) => (
-                        <img
-                          key={i}
-                          src={client.logo}
-                          alt={client.alt}
-                          className="clientLogo"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+        <section
+          className={`obra-section ${
+            activeTab === "maritimas" ? "active" : ""
+          }`}
+        >
+          {renderObras(maritimas, "maritimas")}
         </section>
-
-        <section id="obras-aeropotuarias" class="obra-section">
-          {/* Obras Aeroportuarias */}
-          <h3 className="partnerFieldTitle">Obras Aeroportuarias</h3>
-          {aeroportuarias.map((aero, index) => (
-            <div className="partnerContainer" key={index}>
-              <div
-                className="partnerProjectName"
-                onClick={() => handleToggleAero(index)}
-                style={{
-                  cursor: "pointer",
-                  fontWeight: "bold",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center"
-                }}
-              >
-                {aero.title}
-                <img
-                  src={openIndexAero === index ? chevronDown : chevronRight}
-                  alt={openIndexAero === index ? "Chevron Down" : "Chevron Right"}
-                  style={{ width: "30px", height: "30px" }}
-                />
-              </div>
-              <div
-                className={`partnerProjectInfoClients ${openIndexAero === index ? "open" : ""}`}
-              >
-                <div className="partnerFirstContainer">
-                  <div className="partnerProjectDate">Año: {aero.year}</div>
-                </div>
-                <div className="partnerDescriptionContainer">
-                  <div className="partnerProjectDescription">
-                    <p>
-                      <strong className="descriptionParagraph">Descripción:</strong> {aero.description}
-                    </p>
-                  </div>
-                  <div className="partnerLogoContainerAlt">
-                    <h3>Clientes:</h3>
-                    <div className="clientContainer">
-                      {aero.clients.map((client, i) => (
-                        <img
-                          key={i}
-                          src={client.logo}
-                          alt={client.alt}
-                          className="clientLogo"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+        <section
+          className={`obra-section ${activeTab === "aero" ? "active" : ""}`}
+        >
+          {renderObras(aeroportuarias, "aero")}
         </section>
-
-        <section id="obras-industriales" class="obra-section">
-          {/* Obras industriales */}
-          <h3 className="partnerFieldTitle">Obras Industriales</h3>
-          {industriales.map((indu, index) => (
-            <div className="partnerContainer" key={index}>
-              <div
-                className="partnerProjectName"
-                onClick={() => handleToggleIndustriales(index)}
-                style={{
-                  cursor: "pointer",
-                  fontWeight: "bold",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center"
-                }}
-              >
-                {indu.title}
-                <img
-                  src={openIndexIndustriales === index ? chevronDown : chevronRight}
-                  alt={openIndexIndustriales === index ? "Chevron Down" : "Chevron Right"}
-                  style={{ width: "30px", height: "30px" }}
-                />
-              </div>
-              <div
-                className={`partnerProjectInfoClients ${openIndexIndustriales === index ? "open" : ""}`}
-              >
-                <div className="partnerFirstContainer">
-                  <div className="partnerProjectDate">Año: {indu.year}</div>
-                </div>
-                <div className="partnerDescriptionContainer">
-                  <div className="partnerProjectDescription">
-                    <p>
-                      <strong className="descriptionParagraph">Descripción:</strong> {indu.description}
-                    </p>
-                  </div>
-                  <div className="partnerLogoContainerAlt">
-                    <h3>Clientes:</h3>
-                    <div className="clientContainer">
-                      {indu.clients.map((client, i) => (
-                        <img
-                          key={i}
-                          src={client.logo}
-                          alt={client.alt}
-                          className="clientLogo"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+        <section
+          className={`obra-section ${
+            activeTab === "industriales" ? "active" : ""
+          }`}
+        >
+          {renderObras(industriales, "industriales")}
         </section>
       </div>
     </section>

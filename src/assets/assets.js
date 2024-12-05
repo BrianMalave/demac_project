@@ -25,6 +25,7 @@ import dragadosLogo from './dragadosLogo.svg'
 import comsaLogo from './comsaLogo.svg'
 import minusIcon from './minusIcon.svg'
 import menuClose from './close-menu-icon.svg'
+import closeButtonModal from './close-button-modal.svg'
 import chevronRight from './chevron-right.svg'
 import chevronDown from './chevron-down.svg'
 import menuMobile from './menu-mobile.svg'
@@ -69,6 +70,7 @@ export {
     minusIcon,
     demacLogoGray,
     menuClose,
+    closeButtonModal,
     chevronRight,
     chevronDown,
     demacMenu,
