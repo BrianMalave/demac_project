@@ -12,26 +12,26 @@ import {
 } from '../assets/assets'
 
 export const navLinks = [
-    {
-      id: "nosotros",
-      title: "Nosotros",
-    },
-    {
-      id: "servicios",
-      title: "Servicios",
-    },
-    {
-      id: "partners",
-      title: "Partners",
-    },
-    {
-      id: "contacto",
-      title: "Contacto",
-    },
+  {
+    id: "nosotros",
+    title: "Nosotros",
+  },
+  {
+    id: "servicios",
+    title: "Servicios",
+  },
+  {
+    id: "partners",
+    title: "Partners",
+  },
+  {
+    id: "contacto",
+    title: "Contacto",
+  },
 ];
 
 export const disclosureInfo = [
-   {
+  {
     title: "Servicio integral de Ingeniería básica y de detalle",
     content: `
       Nuestra experiencia en el sector de la construcción nos permite garantizar la viabilidad técnica, económica y operativa de cada proyecto, abarcando:
@@ -80,6 +80,7 @@ export const viales = [
     clients: [
       { logo: ferrovialLogo, alt: "ferrovial partner Demac" },
     ],
+    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
   },
   {
     title: "Obras de Infraestructura y Superestructura Puente Bicentenario Oriente",
@@ -89,6 +90,7 @@ export const viales = [
       { logo: besalcoLogo, alt: "besalco partner Demac" },
       { logo: arrigoniLogo, alt: "arrigoni partner Demac" }
     ],
+    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
   },
   {
     title: "Construcción Puente Ferroviario",
@@ -97,6 +99,7 @@ export const viales = [
     clients: [
       { logo: sacyrLogo, alt: "sacyr partner Demac" },
     ],
+    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
   },
   {
     title: "Construcción Puentes y Fosos, Ruta Nahuelbuta",
@@ -106,49 +109,50 @@ export const viales = [
       { logo: besalcoLogo, alt: "besalco partner Demac" },
       { logo: belfiLogo, alt: "belfi partner Demac" },
     ],
+    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
   },
 ];
 
 export const maritimas = [
   {
     title: "Reparación Molo 500 Norte Base Naval Talcahuano",
-    year: "Próximamente",
     description: "Reparación y habilitación de nuevas redes de servicios, incluyendo agua potable, alcantarillado, red contra incendios y electricidad, en el sector Molo 500 Norte. Además, se realizó la pavimentación en adocreto de las vías, garantizando una infraestructura duradera y funcional para la zona.",
     clients: [
       { logo: dragadosLogo, alt: "dragados partner Demac" },
       { logo: besalcoLogo, alt: "besalco partner Demac" },
       { logo: comsaLogo, alt: "comsa partner Demac" },
     ],
+    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
   },
   {
     title: "Construcción Molo Sur Base Naval Talcahuano",
-    year: "Próximamente",
     description: "Reparación de frentes de atraque mediante intervención en grietas y reconstrucción parcial de consolas de apoyo en vigas transversales. Incluye el montaje e instalación de nuevas defensas y bitas, asegurando la estabilidad estructural y la operatividad del área portuaria.",
     clients: [
       { logo: dragadosLogo, alt: "dragados partner Demac" },
       { logo: besalcoLogo, alt: "besalco partner Demac" },
       { logo: comsaLogo, alt: "comsa partner Demac" },
     ],
+    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
   },
   {
     title: "Reparaciones Filtraciones Dique Seco N°2 Asmar Thno",
-    year: "Próximamente",
     description: "Construcción de infraestructura de Ramal 6 Norte, Tramos Faltantes, Paso Superior San Pedro y Lazo 1 Sur, realizando labores de construcción de columnas, vigas de amarre, cabezales y estribos de puente.",
     clients: [
-      { logo: dragadosLogo, alt: "dragados partner Demac"},
+      { logo: dragadosLogo, alt: "dragados partner Demac" },
       { logo: besalcoLogo, alt: "besalco partner Demac" },
       { logo: comsaLogo, alt: "comsa partner Demac" },
     ],
+    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
   },
   {
     title: "Rehabilitación redes AP y RCI Asmar Thno",
-    year: "Próximamente",
     description: "Suministro, fabricación, instalación, pruebas y puesta en marcha de los sistemas de nuevas redes contra incendio y agua potable en la calle 34 de ASMAR. Además, se realizó la reparación y pintura de las oficinas del consorcio Dragados, Comsa y Besalco, junto con las oficinas de la inspección técnica de obras, asegurando la calidad y funcionalidad de las instalaciones.",
     clients: [
-      { logo: dragadosLogo, alt: "dragados partner Demac"},
-      { logo: besalcoLogo, alt: "besalco partner Demac"},
-      { logo: comsaLogo, alt: "comsa partner Demac"},
+      { logo: dragadosLogo, alt: "dragados partner Demac" },
+      { logo: besalcoLogo, alt: "besalco partner Demac" },
+      { logo: comsaLogo, alt: "comsa partner Demac" },
     ],
+    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
   },
 ];
 
@@ -160,6 +164,7 @@ export const aeroportuarias = [
     clients: [
       { logo: icafalLogo, alt: "icafal partner Demac" }
     ],
+    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
   }
 ];
 
@@ -171,6 +176,7 @@ export const industriales = [
     clients: [
       { logo: frutillarLogo, alt: "frutillar partner Demac" }
     ],
+    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
   },
   {
     title: "Hidroeléctrica San Andrés",
@@ -179,6 +185,7 @@ export const industriales = [
     clients: [
       { logo: icafalLogo, alt: "icafal partner Demac" }
     ],
+    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
   },
   {
     title: "Ampliación Planta Lechera",
@@ -187,22 +194,25 @@ export const industriales = [
     clients: [
       { logo: frutillarLogo, alt: "frutillar partner Demac" }
     ],
+    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
   },
   {
     title: "Desarme, traslado y acopio de Puente Mecano",
     year: "2016 - 2017",
     description: "Desmontaje de Puente Mecano provisorio sobre Río Bíobio luego del terremoto 27F , trabajos incluyeron desarme, traslado a regimiento Chacabuco y acopio en el mismo lugar.",
     clients: [
-      { logo: besalcoLogo, alt: "besalco partner Demac"},
+      { logo: besalcoLogo, alt: "besalco partner Demac" },
       { logo: arrigoniLogo, alt: "arrigoni partner Demac" }
     ],
+    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
   },
   {
     title: "Proyecto MAPA",
     year: "2022",
     description: "Movimiento de tierras y montaje de estructuras.",
     clients: [
-      { logo: besalcoLogo, alt: "besalco partner Demac"}
+      { logo: besalcoLogo, alt: "besalco partner Demac" }
     ],
+    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
   }
 ];

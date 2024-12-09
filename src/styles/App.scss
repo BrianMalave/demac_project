@@ -18,6 +18,12 @@
   scroll-margin-top: 200px;
 }
 
+#servicios,
+#partners,
+#contacto {
+  scroll-margin-top: 120px;
+}
+
 .fixed {
   @include fixedPosition
 }
@@ -797,7 +803,7 @@ button.swal2-confirm.swal2-styled {
 }
 
 .partnerProjectDescription p {
-    width: 600px;
+    width: 100%;
     @media (width <= 990px) {
       width: 100%;
       font-size: 14px;
@@ -809,6 +815,7 @@ button.swal2-confirm.swal2-styled {
   justify-content: space-between;
   margin-bottom: 2rem;
   @media (width <= 990px) {
+    gap: 10px;
     flex-direction: column;
   }
 }
@@ -977,10 +984,21 @@ text-align: left;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
+  @media (width <= 990px) {
+    min-height: 0;
+    transition: min-height 0.5s ease;
+  }
+}
+
+.clientProject {
+  width: 100%;
 }
 
 .partnerProjectInfoClients.open {
   max-height: 300px;
+  @media (width <= 990px) {
+    min-height: 500px;
+  }
 }
 
 .tabContainer {

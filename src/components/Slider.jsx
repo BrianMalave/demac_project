@@ -93,7 +93,8 @@ const Slider = () => {
             slidesPerView: 1
           },
           1024: {
-            slidesPerView: 3
+            slidesPerView: 3,
+            slidesPerGroup: 1
           }
         }}
         navigation={{ clickable: true }}
@@ -103,7 +104,7 @@ const Slider = () => {
           disableOnInteraction: false
         }}
         loop={true}
-        speed={3000}
+        speed={500}
         style={swiperStyle}
       >
         {images.map((image, index) => (

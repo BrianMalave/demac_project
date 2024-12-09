@@ -92,6 +92,23 @@ const Partner = () => {
                 ))}
               </div>
             </div>
+            <div className="partnerProjectContainerAlt">
+              <div className="clientProjectContainer">
+                <img
+                    src={obra.project}
+                    alt={"Imagen de proyecto"}
+                    className="clientProject"
+                  />
+                {/* {obra.project.map((p, i) => (
+                  <img
+                    key={i}
+                    src={p.project}
+                    // alt={p.alt}
+                    className="clientProject"
+                  />
+                ))} */}
+              </div>
+            </div>
           </div>
         </div>
       </div>
