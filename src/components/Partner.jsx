@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -9,7 +9,7 @@ import {
   comsaLogo,
   asmarLogo,
   chevronDown,
-  chevronRight
+  chevronRight,
 } from "../assets/assets";
 import { viales, maritimas, aeroportuarias, industriales } from "../constants/constants";
 
@@ -22,27 +22,23 @@ const Partner = () => {
   };
 
   const handleToggle = (tab, index) => {
-    setOpenIndexes((prevState) => {
-      const newState = {
-        ...prevState,
-        [tab]: prevState[tab] === index ? null : index
-      };
-      return newState;
-    });
+    setOpenIndexes((prevState) => ({
+      ...prevState,
+      [tab]: prevState[tab] === index ? null : index,
+    }));
   };
+  useEffect(() => {
+    const handleCustomTabChange = (event) => {
+      setActiveTab(event.detail.tab);
+    };
+    window.addEventListener("changeTab", handleCustomTabChange);
 
-  const images = [
-    besalcoLogo,
-    icafalLogo,
-    ferrovialLogo,
-    comsaLogo,
-    asmarLogo
-  ];
+    return () => {
+      window.removeEventListener("changeTab", handleCustomTabChange);
+    };
+  }, []);
 
-  const swiperStyle = {
-    width: "100%",
-    height: "140px"
-  };
+  const images = [besalcoLogo, icafalLogo, ferrovialLogo, comsaLogo, asmarLogo];
 
   const renderObras = (obras, tabKey) => {
     return obras.map((obra, index) => (
@@ -55,7 +51,7 @@ const Partner = () => {
             fontWeight: "bold",
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "center"
+            alignItems: "center",
           }}
         >
           {obra.title}
@@ -66,8 +62,9 @@ const Partner = () => {
           />
         </div>
         <div
-          className={`partnerProjectInfoClients ${openIndexes[tabKey] === index ? "open" : ""
-            }`}
+          className={`partnerProjectInfoClients ${
+            openIndexes[tabKey] === index ? "open" : ""
+          }`}
         >
           <div className="partnerFirstContainer">
             <div className="partnerProjectDate">Año: {obra.year}</div>
@@ -79,36 +76,6 @@ const Partner = () => {
                 {obra.description}
               </p>
             </div>
-            <div className="partnerLogoContainerAlt">
-              <h3>Clientes:</h3>
-              <div className="clientContainer">
-                {obra.clients.map((client, i) => (
-                  <img
-                    key={i}
-                    src={client.logo}
-                    alt={client.alt}
-                    className="clientLogo"
-                  />
-                ))}
-              </div>
-            </div>
-            <div className="partnerProjectContainerAlt">
-              <div className="clientProjectContainer">
-                <img
-                    src={obra.project}
-                    alt={"Imagen de proyecto"}
-                    className="clientProject"
-                  />
-                {/* {obra.project.map((p, i) => (
-                  <img
-                    key={i}
-                    src={p.project}
-                    // alt={p.alt}
-                    className="clientProject"
-                  />
-                ))} */}
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -116,41 +83,7 @@ const Partner = () => {
   };
 
   return (
-    <section className="partnerSection">
-      <div className="partnerTitleContainer">
-        <h1 className="partnerTitle">
-          Partners que nos han elegido por nuestra experiencia
-        </h1>
-      </div>
-
-      {/* SLIDERS PARTNER */}
-      <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        spaceBetween={0}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          1024: { slidesPerView: 5 }
-        }}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        loop={true}
-        speed={3000}
-        style={swiperStyle}
-      >
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <div className="slide-Partner-content">
-              <img
-                className="slide-Partner-image"
-                src={image}
-                alt={`Partner Demac ${index + 1}`}
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-      {/* TAB BUTTONS */}
+    <section id="partners" className="partnerSection">
       <div className="tabContainer">
         <button
           className={`tabButton ${activeTab === "viales" ? "active" : ""}`}
@@ -158,21 +91,18 @@ const Partner = () => {
         >
           Obras Viales
         </button>
-        <div className="spacer"></div>
         <button
           className={`tabButton ${activeTab === "maritimas" ? "active" : ""}`}
           onClick={() => handleTabChange("maritimas")}
         >
           Obras Marítimas
         </button>
-        <div className="spacer"></div>
         <button
           className={`tabButton ${activeTab === "aero" ? "active" : ""}`}
           onClick={() => handleTabChange("aero")}
         >
           Obras Aeroportuarias
         </button>
-        <div className="spacer"></div>
         <button
           className={`tabButton ${activeTab === "industriales" ? "active" : ""}`}
           onClick={() => handleTabChange("industriales")}
@@ -181,27 +111,18 @@ const Partner = () => {
         </button>
       </div>
 
-      {/* TABS CONTENT */}
       <div className="partnerMainContainer">
-        <section
-          className={`obra-section ${activeTab === "viales" ? "active" : ""}`}
-        >
+        <section className={`obra-section ${activeTab === "viales" ? "active" : ""}`}>
           {renderObras(viales, "viales")}
         </section>
-        <section
-          className={`obra-section ${activeTab === "maritimas" ? "active" : ""
-            }`}
-        >
+        <section className={`obra-section ${activeTab === "maritimas" ? "active" : ""}`}>
           {renderObras(maritimas, "maritimas")}
         </section>
-        <section
-          className={`obra-section ${activeTab === "aero" ? "active" : ""}`}
-        >
+        <section className={`obra-section ${activeTab === "aero" ? "active" : ""}`}>
           {renderObras(aeroportuarias, "aero")}
         </section>
         <section
-          className={`obra-section ${activeTab === "industriales" ? "active" : ""
-            }`}
+          className={`obra-section ${activeTab === "industriales" ? "active" : ""}`}
         >
           {renderObras(industriales, "industriales")}
         </section>
