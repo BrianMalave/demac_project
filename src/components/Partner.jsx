@@ -161,7 +161,7 @@ const Partner = () => {
         <section
           className={`obra-section ${activeTab === "civiles" ? "active" : ""}`}
         >
-          {renderObras(industriales, "civiles")}
+          {renderObras(civiles, "civiles")}
         </section>
       </div>
     </section>
