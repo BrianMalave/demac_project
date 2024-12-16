@@ -44,7 +44,7 @@ const Field = () => {
       </div>
       <div className="fieldImagesContainer">
         <div className="fieldImagesSubContainer motion-down">
-          <a onClick={() => handleImageClick("aero")}>
+          <a onClick={() => handleImageClick("civiles")}>
             <img src={civiles} alt="Obras Civiles por Demac" className="fieldImages" />
             <h2>Obras Civiles</h2>
           </a>

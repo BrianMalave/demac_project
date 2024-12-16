@@ -11,7 +11,7 @@ import {
   chevronDown,
   chevronRight,
 } from "../assets/assets";
-import { viales, maritimas, aeroportuarias, industriales } from "../constants/constants";
+import { viales, maritimas, aeroportuarias, industriales, civiles } from "../constants/constants";
 
 const Partner = () => {
   const [activeTab, setActiveTab] = useState("viales");
@@ -62,9 +62,8 @@ const Partner = () => {
           />
         </div>
         <div
-          className={`partnerProjectInfoClients ${
-            openIndexes[tabKey] === index ? "open" : ""
-          }`}
+          className={`partnerProjectInfoClients ${openIndexes[tabKey] === index ? "open" : ""
+            }`}
         >
           <div className="partnerFirstContainer">
             <div className="partnerProjectDate">Año: {obra.year}</div>
@@ -76,6 +75,28 @@ const Partner = () => {
                 {obra.description}
               </p>
             </div>
+            <div className="partnerLogoContainerAlt">
+              <h3>Clientes:</h3>
+              <div className="clientContainer">
+                {obra.clients.map((client, i) => (
+                  <img
+                    key={i}
+                    src={client.logo}
+                    alt={client.alt}
+                    className="clientLogo"
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="partnerProjectContainerAlt">
+              <div className="clientProjectContainer">
+                <img
+                    src={obra.project}
+                    alt={"Imagen de proyecto"}
+                    className="clientProject"
+                  />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -84,6 +105,11 @@ const Partner = () => {
 
   return (
     <section id="partners" className="partnerSection">
+      <div className="partnerTitleContainer">
+        <h1 className="partnerTitle">
+          Partners que nos han elegido por nuestra experiencia
+        </h1>
+      </div>
       <div className="tabContainer">
         <button
           className={`tabButton ${activeTab === "viales" ? "active" : ""}`}
@@ -109,6 +135,12 @@ const Partner = () => {
         >
           Obras Industriales
         </button>
+        <button
+          className={`tabButton ${activeTab === "civiles" ? "active" : ""}`}
+          onClick={() => handleTabChange("civiles")}
+        >
+          Obras Civiles
+        </button>
       </div>
 
       <div className="partnerMainContainer">
@@ -125,6 +157,11 @@ const Partner = () => {
           className={`obra-section ${activeTab === "industriales" ? "active" : ""}`}
         >
           {renderObras(industriales, "industriales")}
+        </section>
+        <section
+          className={`obra-section ${activeTab === "civiles" ? "active" : ""}`}
+        >
+          {renderObras(industriales, "civiles")}
         </section>
       </div>
     </section>

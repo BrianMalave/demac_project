@@ -17,7 +17,9 @@ const App = () => (
     <div id='project' className='mainContainer'>
         <Project />
     </div>
+    <div className='sliderContainer'>
         <Slider />
+    </div>
     <div id='partners' className='mainContainer pt-100'>
         <Partner />
     </div>

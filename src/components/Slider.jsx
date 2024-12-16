@@ -13,7 +13,34 @@ import {
   slideImagen3,
   slideImagen4,
   slideImagen5,
-  slideImagen6
+  slideImagen6,
+  aeropuerto1,
+  aeropuerto2,
+  aeropuerto3,
+  aeropuerto4,
+  angostura1,
+  angostura2,
+  angostura3,
+  angostura4,
+  dique1,
+  dique2,
+  dique3,
+  dique4,
+  mapa1,
+  mapa2,
+  mapa3,
+  mapa4,
+  molo1,
+  molo2,
+  molo3,
+  molo4,
+  Puenteb1,
+  Puenteb2,
+  Puenteb3,
+  Puenteb4,
+  Puenteb5,
+  Puenteb6,
+  PuenteRueda
 } from '../assets/assets';
 
 const swiperStyle = {
@@ -30,8 +57,35 @@ const Slider = () => {
     slideImagen2,
     slideImagen3,
     slideImagen4,
-    slideImagen5,
-    slideImagen6
+    // slideImagen5,
+    // slideImagen6,
+    aeropuerto1,
+    aeropuerto2,
+    aeropuerto3,
+    aeropuerto4,
+    angostura1,
+    angostura2,
+    angostura3,
+    angostura4,
+    dique1,
+    dique2,
+    dique3,
+    dique4,
+    mapa1,
+    // mapa2,
+    // mapa3,
+    // mapa4,
+    molo1,
+    molo2,
+    molo3,
+    molo4,
+    Puenteb1,
+    Puenteb2,
+    Puenteb3,
+    Puenteb4,
+    Puenteb5,
+    Puenteb6,
+    PuenteRueda
   ];
 
   const openModal = (index) => {
@@ -65,7 +119,7 @@ const Slider = () => {
               navigation={true}
               loop={true}
               initialSlide={selectedIndex}
-              style={{ width: '80%', height: '80%' }}
+              style={{ width: '100%', height: '100%' }}
             >
               {images.map((image, index) => (
                 <SwiperSlide key={index}>
@@ -94,6 +148,22 @@ const Slider = () => {
           },
           1024: {
             slidesPerView: 3,
+            slidesPerGroup: 1
+          },
+          1440: {
+            slidesPerView: 3,
+            slidesPerGroup: 1
+          },
+          1920: {
+            slidesPerView: 4,
+            slidesPerGroup: 1
+          },
+          1980: {
+            slidesPerView: 5,
+            slidesPerGroup: 1
+          },
+          2560: {
+            slidesPerView: 5,
             slidesPerGroup: 1
           }
         }}

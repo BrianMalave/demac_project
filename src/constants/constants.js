@@ -8,7 +8,13 @@ import {
   belfiLogo,
   sacyrLogo,
   dragadosLogo,
-  frutillarLogo
+  frutillarLogo,
+  aeropuerto1,
+  angostura1,
+  dique3,
+  mapa1,
+  molo3,
+  Puenteb5
 } from '../assets/assets'
 
 export const navLinks = [
@@ -76,21 +82,21 @@ export const viales = [
   {
     title: "Terceras pistas tramo II y nueva plaza de peaje Angostura",
     year: "2014",
-    description: "Ejecución paso superior águila sur, paso superior casino, montaje de cajones prefabricados y obras de arte.",
+    description: "Ejecución paso superior Águila Sur, paso superior casino, montaje de cajones prefabricados y obras de arte.",
     clients: [
       { logo: ferrovialLogo, alt: "ferrovial partner Demac" },
     ],
-    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
+    project: angostura1
   },
   {
     title: "Obras de Infraestructura y Superestructura Puente Bicentenario Oriente",
-    year: "2016 - 2027",
-    description: "Desmontaje de Puente Mecano provisorio sobre Río Bíobio luego del terremoto 27F, trabajos incluyeron desarme, traslado a regimiento Chacabuco y acopio en el mismo lugar.",
+    year: "2016 - 2017",
+    description: "Construcción de infraestructura de Ramal 1 Sur, Lazo 3 Norte, Ramal 6 Norte, Paso Superior San Pedro y Lazo 1 Sur realizando labores de construcción de columnas, vigas de amarre, cabezales y estribos, incluyendo rellenos estructurales, Tramos Faltantes; Recrecido lateral y recrecido completo de vigas de amarre existentes en puente oriente (31 cepas), realizando labores de demolición, movimiento de tierra , agotamiento de napas, colocación de pernos de anclaje, obras civiles.",
     clients: [
       { logo: besalcoLogo, alt: "besalco partner Demac" },
       { logo: arrigoniLogo, alt: "arrigoni partner Demac" }
     ],
-    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
+    project: Puenteb5
   },
   {
     title: "Construcción Puente Ferroviario",
@@ -99,7 +105,7 @@ export const viales = [
     clients: [
       { logo: sacyrLogo, alt: "sacyr partner Demac" },
     ],
-    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
+    project: ""
   },
   {
     title: "Construcción Puentes y Fosos, Ruta Nahuelbuta",
@@ -109,40 +115,61 @@ export const viales = [
       { logo: besalcoLogo, alt: "besalco partner Demac" },
       { logo: belfiLogo, alt: "belfi partner Demac" },
     ],
-    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
+    project: ""
+  },
+  {
+    title: "Acceso a Planta de Inacesa",
+    year: "2007",
+    description: "Se realizó Obra Vial.",
+    clients: [
+      { logo: "", 
+        alt: "CEMENTOS BIO BIO S.A." },
+    ],
+    project: ""
+  },
+  {
+    title: "Atravieso Los Lingues, Panamericana Sur",
+    year: "2007",
+    description: "Se realizó Obra Civil.",
+    clients: [
+      { logo: "", 
+        alt: "AUTOPISTADEL MAIPO S.A." },
+    ],
+    project: ""
+  },
+  {
+    title: "Autopista Santiago, Talca y By-pass Rancagua",
+    year: "2004 - 2005",
+    description: "Saneamiento, Obras Civiles, Colectores de Agua lluvia.",
+    clients: [
+      { logo: ferrovialLogo, 
+        alt: "FERROVIAL & AGROMAN CHILE S.A." },
+    ],
+    project: ""
   },
 ];
 
 export const maritimas = [
   {
-    title: "Reparación Molo 500 Norte Base Naval Talcahuano",
-    description: "Reparación y habilitación de nuevas redes de servicios, incluyendo agua potable, alcantarillado, red contra incendios y electricidad, en el sector Molo 500 Norte. Además, se realizó la pavimentación en adocreto de las vías, garantizando una infraestructura duradera y funcional para la zona.",
+    title: "Construcción y Reparación Molo Sur y 500 Norte, Base Naval Talcahuano",
+    description: "Reparación de frentes de atraque mediante intervención en grietas y reconstrucción parcial de consolas de apoyo en vigas transversales. Incluye el montaje e instalación de nuevas defensas y bitas, asegurando la estabilidad estructural y la operatividad del área portuaria. Se realizaron reparaciones y habilitación de nuevas redes de servicios, incluyendo agua potable, alcantarillado, red contra incendios y electricidad, en el sector Molo 500 Norte. Sumado, a la pavimentación en adocreto de las vías, garantizando una infraestructura duradera y funcional para la zona.",
     clients: [
       { logo: dragadosLogo, alt: "dragados partner Demac" },
       { logo: besalcoLogo, alt: "besalco partner Demac" },
       { logo: comsaLogo, alt: "comsa partner Demac" },
     ],
-    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
-  },
-  {
-    title: "Construcción Molo Sur Base Naval Talcahuano",
-    description: "Reparación de frentes de atraque mediante intervención en grietas y reconstrucción parcial de consolas de apoyo en vigas transversales. Incluye el montaje e instalación de nuevas defensas y bitas, asegurando la estabilidad estructural y la operatividad del área portuaria.",
-    clients: [
-      { logo: dragadosLogo, alt: "dragados partner Demac" },
-      { logo: besalcoLogo, alt: "besalco partner Demac" },
-      { logo: comsaLogo, alt: "comsa partner Demac" },
-    ],
-    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
+    project: molo3
   },
   {
     title: "Reparaciones Filtraciones Dique Seco N°2 Asmar Thno",
-    description: "Construcción de infraestructura de Ramal 6 Norte, Tramos Faltantes, Paso Superior San Pedro y Lazo 1 Sur, realizando labores de construcción de columnas, vigas de amarre, cabezales y estribos de puente.",
+    year: "2015 - 2016",
+    description: "Hidrolavado de muros interiores y demoliciones menores. Preparación y sellado de fisuras, inyección de fisuras y reparación de grietas.",
     clients: [
       { logo: dragadosLogo, alt: "dragados partner Demac" },
       { logo: besalcoLogo, alt: "besalco partner Demac" },
       { logo: comsaLogo, alt: "comsa partner Demac" },
     ],
-    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
+    project: dique3
   },
   {
     title: "Rehabilitación redes AP y RCI Asmar Thno",
@@ -152,31 +179,49 @@ export const maritimas = [
       { logo: besalcoLogo, alt: "besalco partner Demac" },
       { logo: comsaLogo, alt: "comsa partner Demac" },
     ],
-    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
+    project: ""
   },
 ];
 
 export const aeroportuarias = [
   {
-    title: "Ampliación pistas de aterrizaje Aeródromo, Obras de saeamiento, Construcción de Edificios y Salas de Bomba Carriel Sur",
+    title: "Construcción de Edificios y Salas de Bomba, Aeropuerto Carriel Sur",
     year: "Próximamente",
     description: "Incluye excavaciones masivas, rellenos estructurales y hormigonado de nuevas pistas de aterrizaje. También se ejecutó la construcción de cajones dobles y obras de arte para las pistas, junto con la preparación e instalación de enfierradura para edificios de la DGAC, cajones, estanques y salas de bombas, asegurando la funcionalidad y seguridad de la infraestructura aeroportuaria.",
     clients: [
       { logo: icafalLogo, alt: "icafal partner Demac" }
     ],
-    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
+    project: aeropuerto1
   }
 ];
 
 export const industriales = [
   {
-    title: "Montaje de equipos industriales Frutillar",
-    year: "2006",
-    description: "Montaje de equipos REDA.",
+    title: "Montaje de equipos industriales Frutillar, Región de los Lagos",
+    year: "2006 - 2008",
+    description: "Montaje de equipos REDA, Montaje y revestimiento de Estanques de Acero Inoxidable.",
     clients: [
-      { logo: frutillarLogo, alt: "frutillar partner Demac" }
+      { logo: frutillarLogo, alt: "frutillar partner Demac, LÁCTEOS FRUTILLAR S.A." }
     ],
-    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
+    project: ""
+  },
+  {
+    title: "Ampliación Planta Lechera Frutillar, Región de los Lagos",
+    year: "2006 - 2008",
+    description: "Montaje y soldadura tubería de acero pipe rack de servicio y proceso, montaje de caldera chips.",
+    clients: [
+      { logo: frutillarLogo, alt: "frutillar partner Demac, LÁCTEOS FRUTILLAR S.A." }
+    ],
+    project: ""
+  },
+  {
+    title: "Construcción Edificio quesería, Frutillar, Región de los Lagos",
+    year: "2006 - 2008",
+    description: "Se realizó Obra Civil.",
+    clients: [
+      { logo: frutillarLogo, alt: "frutillar partner Demac, LÁCTEOS FRUTILLAR S.A." }
+    ],
+    project: ""
   },
   {
     title: "Hidroeléctrica San Andrés",
@@ -185,26 +230,7 @@ export const industriales = [
     clients: [
       { logo: icafalLogo, alt: "icafal partner Demac" }
     ],
-    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
-  },
-  {
-    title: "Ampliación Planta Lechera",
-    year: "2006 - 2008",
-    description: "Montaje y soldadura tubería de acero pipe rack de servicio y proceso, montaje de caldera chips.",
-    clients: [
-      { logo: frutillarLogo, alt: "frutillar partner Demac" }
-    ],
-    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
-  },
-  {
-    title: "Desarme, traslado y acopio de Puente Mecano",
-    year: "2016 - 2017",
-    description: "Desmontaje de Puente Mecano provisorio sobre Río Bíobio luego del terremoto 27F , trabajos incluyeron desarme, traslado a regimiento Chacabuco y acopio en el mismo lugar.",
-    clients: [
-      { logo: besalcoLogo, alt: "besalco partner Demac" },
-      { logo: arrigoniLogo, alt: "arrigoni partner Demac" }
-    ],
-    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
+    project: ""
   },
   {
     title: "Proyecto MAPA",
@@ -213,6 +239,85 @@ export const industriales = [
     clients: [
       { logo: besalcoLogo, alt: "besalco partner Demac" }
     ],
-    project: "https://dummyimage.com/500x250/aaaaaa/ffffff"
+    project: mapa1
+  },
+  {
+    title: "Planta de Tratamiento de Aguas Servidas",
+    year: "2006",
+    description: "Se realizaron Obras Civiles, Montajes y Piping.",
+    clients: [
+      { logo: "", 
+        alt: "ESSBIO S.A" }
+    ],
+    project: ""
   }
+];
+
+export const civiles = [
+  {
+    title: "Ampliación de planta de tratamiento de Aguas Servidas, Paine",
+    year: "2012 - 2013",
+    description: "Movimiento de Tierra y Civiles.",
+    clients: [
+      { 
+        logo: "", 
+        alt: "EMPRESA DE INGENIERÍA DE MEDIO AMBIENTE BAPA S.A. (AGUAS ANDINAS)" },
+    ],
+    project: ""
+  },
+  {
+    title: "Construcción de Viviendas Valparaiso, San Felipe, Llay-Llay, Catemu",
+    year: "2009 - 2012",
+    description: "Arquitectura, urbanización, Sanitarias.",
+    clients: [
+      { 
+        logo: "", 
+        alt: "CONSTRUCTORA CORSA S.A. (SERVIU V REGIÓN)" },
+    ],
+    project: ""
+  },
+  {
+    title: "Construcción de Jardín Infantil y Sala Cuna, Los Andes",
+    year: "2010",
+    description: "Se realizo la arquitectura del proyecto.",
+    clients: [
+      { 
+        logo: "", 
+        alt: "JUNTA NACIONAL DE JARDÍN INFANTIL MUNICIPALIDAD DE LOS ANDES" },
+    ],
+    project: ""
+  },
+  {
+    title: "Construcción de Estanques Hormigón para Agua Potable, Machalí",
+    year: "2007",
+    description: "Se realizó Obra Civil.",
+    clients: [
+      { 
+        logo: "", 
+        alt: "EMPRESA DE SERVICIOS SANITARIOS DEL BIO-BIO S.A." },
+    ],
+    project: ""
+  },
+  {
+    title: "Modificación techumbre Edificio de Poder, Asmar Thno.",
+    year: "2016 - 2017",
+    description: "Cambio de pendiente de estructura de techumbre y cubierta de edificio de abastecimiento eléctrico de planta industrial Asmar, Talcahuano.",
+    clients: [
+      { 
+        logo: "", 
+        alt: "INGENIERIA CORSA SPA." },
+    ],
+    project: ""
+  },
+  {
+    title: "Redes de Agua Potable y Red de incendio en calle 34. Reparación oficinas de inspección técnica, Asmar Thno.",
+    year: "2016",
+    description: "Suministro, fabricación, instalación, pruebas y puesta en marcha de los sistemas de las nuevas redes contra incendio y agua potable de la calle 34 en Asmar y reparación y pintura de las oficina DCB e ITO (ex jardín infantil).",
+    clients: [
+      { 
+        logo: "", 
+        alt: "INGENIERIA CORSA SPA." },
+    ],
+    project: ""
+  },
 ];
