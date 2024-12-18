@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { arrowDown, gallery } from '../assets/assets'
-
 const Project = () => (
   <section className='projectSection'>
     <div className='projectInfoContainer'>

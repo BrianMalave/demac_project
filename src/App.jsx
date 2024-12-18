@@ -5,7 +5,7 @@ const App = () => (
     <div className='mainContainer mainContainerColor fixed p-0'>
         <Header />
     </div>
-    <div id='nosotros' className='mainContainer mainContainerColor pt-140'>
+    <div id='nosotros' className='mainContainer tertiaryContainerColor  pt-140'>
         <Hero />
     </div>
     <div id='field' className='mainContainer'>

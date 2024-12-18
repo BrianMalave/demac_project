@@ -44,32 +44,32 @@ const Field = () => {
       </div>
       <div className="fieldImagesContainer">
         <div className="fieldImagesSubContainer motion-down">
-          <a onClick={() => handleImageClick("civiles")}>
-            <img src={civiles} alt="Obras Civiles por Demac" className="fieldImages" />
-            <h2>Obras Civiles</h2>
+          <a onClick={() => handleImageClick("aero")}>
+            <img src={civiles} alt="Obras Aeroportuarias por Demac" className="fieldImages" loading="lazy" />
+            <h2>Aeroportuarias</h2>
           </a>
         </div>
         <div className="fieldImagesSubContainer motion-up">
           <a onClick={() => handleImageClick("industriales")}>
-            <img src={industriales} alt="Obras Industriales por Demac" className="fieldImages" />
+            <img src={industriales} alt="Obras Industriales por Demac" className="fieldImages" loading="lazy" />
             <h2>Industriales</h2>
           </a>
         </div>
         <div className="fieldImagesSubContainer motion-up">
-          <a onClick={() => handleImageClick("industriales")}>
-            <img src={mineria} alt="Obras Mineras por Demac" className="fieldImages" />
-            <h2>Mineras</h2>
+          <a onClick={() => handleImageClick("civiles")}>
+            <img src={mineria} alt="Obras Civiles por Demac" className="fieldImages" loading="lazy" />
+            <h2>Civiles</h2>
           </a>
         </div>
         <div className="fieldImagesSubContainer motion-up">
           <a onClick={() => handleImageClick("maritimas")}>
-            <img src={maritima} alt="Obras Maritimas por Demac" className="fieldImages" />
+            <img src={maritima} alt="Obras Maritimas por Demac" className="fieldImages" loading="lazy" />
             <h2>Marítimas</h2>
           </a>
         </div>
         <div className="fieldImagesSubContainer motion-down">
           <a onClick={() => handleImageClick("viales")}>
-            <img src={viales} alt="Obras Viales por Demac" className="fieldImages" />
+            <img src={viales} alt="Obras Viales por Demac" className="fieldImages" loading="lazy" />
             <h2>Viales</h2>
           </a>
         </div>

@@ -8,6 +8,9 @@ import {
   ferrovialLogo,
   comsaLogo,
   asmarLogo,
+  arrigoniLogo,
+  belfiLogo,
+  sacyrLogo,
   chevronDown,
   chevronRight,
 } from "../assets/assets";
@@ -39,6 +42,11 @@ const Partner = () => {
   }, []);
 
   const images = [besalcoLogo, icafalLogo, ferrovialLogo, comsaLogo, asmarLogo];
+
+  const swiperStyle = {
+    width: "100%",
+    height: "140px"
+  };
 
   const renderObras = (obras, tabKey) => {
     return obras.map((obra, index) => (
@@ -80,6 +88,7 @@ const Partner = () => {
               <div className="clientContainer">
                 {obra.clients.map((client, i) => (
                   <img
+                    loading="lazy"
                     key={i}
                     src={client.logo}
                     alt={client.alt}
@@ -91,8 +100,9 @@ const Partner = () => {
             <div className="partnerProjectContainerAlt">
               <div className="clientProjectContainer">
                 <img
+                    loading="lazy"
                     src={obra.project}
-                    alt={"Imagen de proyecto"}
+                    // alt={"Imagen de proyecto"}
                     className="clientProject"
                   />
               </div>
@@ -109,6 +119,35 @@ const Partner = () => {
         <h1 className="partnerTitle">
           Partners que nos han elegido por nuestra experiencia
         </h1>
+      </div>
+      <div>
+              {/* SLIDERS PARTNER */}
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={0}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          1024: { slidesPerView: 5 }
+        }}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop={true}
+        speed={3000}
+        style={swiperStyle}
+      >
+        {images.map((image, index) => (
+          <SwiperSlide key={index}>
+            <div className="slide-Partner-content">
+              <img
+                loading="lazy"
+                className="slide-Partner-image"
+                src={image}
+                alt={`Partner Demac ${index + 1}`}
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
       </div>
       <div className="tabContainer">
         <button

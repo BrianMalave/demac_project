@@ -13,7 +13,7 @@ const Service = () => {
 
       <div className="serviceSubContainer">
         <div className="serviceLogoContainer">
-          <img className='serviceLogo' src={heroLogo} alt="Constructora Demac Logo" />
+          <img loading="lazy" className='serviceLogo' src={heroLogo} alt="Constructora Demac Logo" />
         </div>
 
         <div className="serviceTextContainer">

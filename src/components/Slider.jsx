@@ -123,7 +123,7 @@ const Slider = () => {
             >
               {images.map((image, index) => (
                 <SwiperSlide key={index}>
-                  <img src={image} alt={`Zoomed ${index}`} className="modal-image" />
+                  <img loading="lazy" src={image} alt={`Zoomed ${index}`} className="modal-image" />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -181,7 +181,7 @@ const Slider = () => {
           <SwiperSlide key={index}>
             <div className="slide-content" onClick={() => openModal(index)}>
               <div className="triangle-topright"></div>
-              <img src={image} alt={`Proyectos Demac ${index + 1}`} />
+              <img loading="lazy" src={image} alt={`Proyectos Demac ${index + 1}`} />
             </div>
           </SwiperSlide>
         ))}

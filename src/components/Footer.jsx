@@ -6,7 +6,7 @@ const Footer = () => (
     <div className='footerContainer'>
       <div className='footerLogoContainer'>
         <a href="/">
-        <img src={logoFooter} />
+        <img loading="lazy" src={logoFooter} />
         </a>
         <h1>Somos una solución integral para proyectos de construcción, desde el desarrollo de ingeniería a la construcción de obras complejas.</h1>
       </div>

@@ -9,7 +9,7 @@ const Header = () => {
 		<nav className="navBar">
 			{/* Desktop */}
 			<a href="/">
-				<img src={demacLogoGray} alt="Constructora Demac logo" className="logoImage" />
+				<img src={demacLogoGray} alt="Constructora Demac logo" className="logoImage" loading="lazy" />
 			</a>
 			<ul className="navLinkContainer">
 				{navLinks.map((nav, index) => (
