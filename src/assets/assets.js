@@ -66,6 +66,10 @@ import Puenteb4 from './Puente_B4.jpg'
 import Puenteb5 from './Puente_B5.jpg'
 import Puenteb6 from './PuenteB6.jpg'
 import PuenteRueda from './Puente_BRueda.jpg'
+import andinasLogo from './andinasLogo.svg'
+import corsaLogo from './corsaLogo.svg'
+import essbioLogo from './essbioLogo.svg'
+import jujiLogo from './jujiLogo.svg'
 
 
 export {
@@ -136,5 +140,9 @@ export {
     Puenteb4,
     Puenteb5,
     Puenteb6,
-    PuenteRueda
+    PuenteRueda,
+    jujiLogo,
+    essbioLogo,
+    corsaLogo,
+    andinasLogo
 }

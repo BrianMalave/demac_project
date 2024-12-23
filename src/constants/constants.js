@@ -9,6 +9,10 @@ import {
   sacyrLogo,
   dragadosLogo,
   frutillarLogo,
+  jujiLogo,
+  essbioLogo,
+  corsaLogo,
+  andinasLogo,
   aeropuerto1,
   angostura1,
   dique3,
@@ -274,7 +278,7 @@ export const civiles = [
     description: "Movimiento de Tierra y Civiles.",
     clients: [
       { 
-        logo: "", 
+        logo: andinasLogo, 
         alt: "EMPRESA DE INGENIERÍA DE MEDIO AMBIENTE BAPA S.A. (AGUAS ANDINAS)" 
       },
     ],
@@ -283,10 +287,10 @@ export const civiles = [
   {
     title: "Construcción de Viviendas Valparaiso, San Felipe, Llay-Llay, Catemu",
     year: "2009 - 2012",
-    description: "Arquitectura, urbanización, Sanitarias.",
+    description: "Arquitectura, urbanización, sanitarias.",
     clients: [
       { 
-        logo: "", 
+        logo: corsaLogo, 
         alt: "CONSTRUCTORA CORSA S.A. (SERVIU V REGIÓN)" },
     ],
     // project: ""
@@ -297,7 +301,7 @@ export const civiles = [
     description: "Se realizo la arquitectura del proyecto.",
     clients: [
       { 
-        logo: "", 
+        logo: jujiLogo, 
         alt: "JUNTA NACIONAL DE JARDÍN INFANTIL MUNICIPALIDAD DE LOS ANDES" },
     ],
     // project: ""
@@ -308,7 +312,7 @@ export const civiles = [
     description: "Se realizó Obra Civil.",
     clients: [
       { 
-        logo: "", 
+        logo: essbioLogo, 
         alt: "EMPRESA DE SERVICIOS SANITARIOS DEL BIO-BIO S.A." 
       },
     ],
@@ -320,7 +324,7 @@ export const civiles = [
     description: "Cambio de pendiente de estructura de techumbre y cubierta de edificio de abastecimiento eléctrico de planta industrial Asmar, Talcahuano.",
     clients: [
       { 
-        logo: "", 
+        logo: corsaLogo, 
         alt: "INGENIERIA CORSA SPA." },
     ],
     // project: ""
@@ -331,7 +335,7 @@ export const civiles = [
     description: "Suministro, fabricación, instalación, pruebas y puesta en marcha de los sistemas de las nuevas redes contra incendio y agua potable de la calle 34 en Asmar y reparación y pintura de las oficina DCB e ITO (ex jardín infantil).",
     clients: [
       { 
-        logo: "", 
+        logo: corsaLogo, 
         alt: "INGENIERIA CORSA SPA." },
     ],
     // project: ""
